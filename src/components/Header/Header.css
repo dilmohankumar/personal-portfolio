@@ -1,0 +1,29 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  align-items: center;
+}
+.header-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-family: "Itim", cursive;
+}
+.header-list li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sendMessage {
+  border-radius: 2rem;
+  border: 2px solid rgb(0, 157, 255);
+  padding: 20px;
+  height: 1px;
+}
+.menu-icon {
+  cursor: pointer;
+}

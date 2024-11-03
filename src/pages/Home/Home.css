@@ -1,0 +1,157 @@
+.home-content,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+.home-content {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home-content h1 {
+  padding-top: 4rem;
+  font-size: 5rem;
+  font-weight: 500;
+}
+.home-content p {
+  padding-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #515050;
+}
+.image-container img {
+  width: 18rem;
+  height: auto;
+}
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+.image-container .developer-image {
+  width: 80%;
+  height: 110vh;
+  z-index: -1;
+}
+.image-container .user-image {
+  width: 20%;
+  height: auto;
+}
+.bio-container {
+  background-color: rgb(0, 136, 255);
+  color: white;
+  width: 100%;
+  height: 90vh;
+  margin-top: -9rem;
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 1rem;
+}
+.bio-container h1,
+p {
+  width: 70%;
+  letter-spacing: 0.8px;
+  top: 1rem;
+}
+.bio-container h1 {
+  font-weight: 500;
+  font-size: 3rem;
+}
+.bio-container p {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.skills-container {
+  padding-top: -10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: stretch;
+  margin: 2rem;
+  border: 1px solid #a6a6a6;
+  border-radius: 20px;
+  margin-top: -10rem;
+  background-color: white;
+  font-size: 1.2rem;
+}
+.skill-card {
+  min-height: 40rem;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.skill-card-2,
+.skill-card {
+  border-right: 1px solid #a6a6a6;
+}
+.skills-container img {
+  width: 23%;
+  height: 66px;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+.skill-card-3 img,
+.skill-card-2 img {
+  padding-top: 3rem;
+  width: 43%;
+  height: 92px;
+}
+.skills-container h1 {
+  font-weight: 500;
+}
+.skill-description {
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 2rem;
+}
+.skill-card,
+.skill-card-2,
+.skill-card-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #515050;
+}
+.skill-languages {
+  padding-top: 2.5rem;
+  color: blue;
+}
+.skill-languages-list {
+  padding-top: 10px;
+}
+.skill-tools {
+  padding-top: 2.5rem;
+  color: blue;
+}
+.skill-mentor-stats-list {
+  margin-top: 10px;
+  list-style: none;
+  text-decoration: none;
+  padding-left: 0rem;
+}
+.recent-work-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
