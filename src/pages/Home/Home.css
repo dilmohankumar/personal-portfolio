@@ -147,11 +147,26 @@ p {
   text-decoration: none;
   padding-left: 0rem;
 }
-.recent-work-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
+.recent-work-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding-top: 2rem;
+  font-size: 1rem;
+}
+.recent-work-container h1 {
+  font-weight: 500;
+}
+.recent-work-container p {
+  font-weight: 100;
+  color: #515050;
+  font-size: 20px;
+}
+.recent-work-container a {
+  color: #263def;
+  text-decoration: none;
+  padding-left: 1rem;
 }

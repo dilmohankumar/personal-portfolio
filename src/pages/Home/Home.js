@@ -103,7 +103,9 @@ const Home = () => {
         <p className="recent-work-description">
           Here are a few past design projects I've worked on. Want to see more?
           <span className="email-link">
-          <a href="mailto:kdilmohan101@gmail.com" className="email-me">Email me</a>
+            <a href="mailto:kdilmohan101@gmail.com" className="email-me">
+              Email me
+            </a>
           </span>
         </p>
       </div>
