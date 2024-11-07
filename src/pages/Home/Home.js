@@ -6,6 +6,11 @@ import Developer from "../../assests/developer.png";
 import Dev from "../../assests/dev.png";
 import mentor from "../../assests/mentor.jpg";
 import cd from "../../assests/cd.jpg";
+import Hotelbooking from "../../assests/hotel-booking.jpg";
+import digitalmarket from "../../assests/digitalmarket.jpg";
+import discordbot from "../../assests/discordbot.jpg";
+import shoolay from "../../assests/shoolay.jpg";
+import amazon from "../../assests/amazoneclone.jpg";
 const Home = () => {
   return (
     <div className="home-container">
@@ -110,6 +115,92 @@ const Home = () => {
         </p>
       </div>
       {/* ------------ */}
+      {/* -------------project-cards-start-------- */}
+      <div className="project-cards-container">
+        <div className="project-card-1">
+          <img src={Hotelbooking} alt="Project screenshot" class="card-image" />
+          {/* <div className="card"> */}
+          <div class="card-content">
+            <p class="card-description">
+              Hotelbooking webiste with backend data storing on MongoDB and with
+              user authenticaion system
+            </p>
+            <a
+              href="https://hotel-booking-coral-pi.vercel.app/home"
+              class="card-link"
+            >
+              View Project
+            </a>
+            {/* </div> */}
+          </div>
+        </div>
+        <div className="project-card-1">
+          <img
+            src={digitalmarket}
+            alt="Project screenshot"
+            class="card-image"
+          />
+          <div class="card-content">
+            <p class="card-description">
+              Simple frontend digital marketing website with react
+            </p>
+            <a
+              href="https://digital-marketing-opal.vercel.app/"
+              class="card-link"
+            >
+              View Project
+            </a>
+          </div>
+        </div>
+        <div className="project-card-1">
+          <img src={shoolay} alt="Project screenshot" class="card-image" />
+          <div class="card-content">
+            <p class="card-description">On Progess...</p>
+            <a href="/project-link" class="card-link">
+              On Progess
+            </a>
+          </div>
+        </div>
+        <div className="project-card-1">
+          <img src={discordbot} alt="Project screenshot" class="card-image" />
+          <div class="card-content">
+            <p class="card-description">basic discordbot setup code...</p>
+            <a
+              href="https://github.com/dilmohankumar/discord-bot"
+              class="card-link"
+            >
+              View Code
+            </a>
+          </div>
+        </div>
+        <div className="project-card-1">
+          <img src={amazon} alt="Project screenshot" class="card-image" />
+
+          <div class="card-content">
+            <p class="card-description">
+              Amazon Clone with React, Card Storing System, and Authentication
+              System
+            </p>
+            <a
+              href="https://amazon-clone-hazel-zeta.vercel.app/"
+              class="card-link"
+            >
+              View Project
+            </a>
+          </div>
+        </div>
+        <div className="project-card-1">
+          <img src={Developer} alt="Project screenshot" class="card-image" />
+          <div class="card-content">
+            <p class="card-description">ON PROGESS</p>
+            <a href="/project-link" class="card-link">
+              ON PROGESS
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* -------------project-cards-end---------- */}
     </div>
   );
 };

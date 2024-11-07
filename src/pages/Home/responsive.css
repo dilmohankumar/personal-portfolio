@@ -77,3 +77,12 @@
     border-bottom: 1px solid #a6a6a6;
   }
 }
+@media (max-width: 936px) {
+  .recent-work-container {
+    font-size: 15px;
+  }
+  .recent-work-container p {
+    font-weight: 100;
+    font-size: 15px;
+  }
+}
