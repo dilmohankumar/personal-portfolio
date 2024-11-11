@@ -86,3 +86,102 @@
     font-size: 15px;
   }
 }
+@media (max-width: 979px) {
+  .project-card-1 {
+    width: 100%;
+    height: auto;
+  }
+  .project-card-1 img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 466px) {
+  .project-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .card-description {
+    font-size: 10px;
+  }
+  .card-link {
+    font-size: 10px;
+  }
+}
+@media (max-width: 466px) {
+  .project-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+@media (max-width: 260px) {
+  .project-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+}
+@media (max-width: 500px) {
+  .github-link p {
+    padding: 5px 1rem 5px 1rem;
+    border-radius: 20px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 10950px) {
+  .collaboration-header {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 879px) {
+  .collaboration-header {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 661px) {
+  .collaboration-header {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 1000px) {
+  .startup-journey-container {
+    padding: 10rem;
+  }
+}
+@media (max-width: 700px) {
+  .startup-journey-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .startup-journey-container h1 {
+    font-size: 30px;
+  }
+  .startup-journey-container p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 500px) {
+  .startup-journey-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  .startup-journey-container h1 {
+    font-size: 20px;
+  }
+  .startup-journey-container p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1000px) {
+  .startup-cards-container{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+@media (max-width: 782px) {
+  .startup-cards-container{
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+}
+@media (max-width: 470px) {
+  .startup-cards-container{
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

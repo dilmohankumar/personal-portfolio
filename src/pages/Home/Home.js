@@ -11,6 +11,10 @@ import digitalmarket from "../../assests/digitalmarket.jpg";
 import discordbot from "../../assests/discordbot.jpg";
 import shoolay from "../../assests/shoolay.jpg";
 import amazon from "../../assests/amazoneclone.jpg";
+import sn from "../../assests/sn.png";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
+import HandshakeIcon from "@mui/icons-material/Handshake";
 const Home = () => {
   return (
     <div className="home-container">
@@ -116,91 +120,260 @@ const Home = () => {
       </div>
       {/* ------------ */}
       {/* -------------project-cards-start-------- */}
-      <div className="project-cards-container">
-        <div className="project-card-1">
-          <img src={Hotelbooking} alt="Project screenshot" class="card-image" />
-          {/* <div className="card"> */}
-          <div class="card-content">
-            <p class="card-description">
-              Hotelbooking webiste with backend data storing on MongoDB and with
-              user authenticaion system
-            </p>
-            <a
-              href="https://hotel-booking-coral-pi.vercel.app/home"
-              class="card-link"
-            >
-              View Project
-            </a>
-            {/* </div> */}
+      <div className="parent-card-container">
+        <div className="project-cards-container">
+          <div className="project-card-1">
+            <img
+              src={Hotelbooking}
+              alt="Project screenshot"
+              class="card-image"
+            />
+            {/* <div className="card"> */}
+            <div class="card-content">
+              <p class="card-description">
+                Hotelbooking webiste with backend data storing on MongoDB and
+                with user authenticaion system
+              </p>
+              <a
+                href="https://hotel-booking-coral-pi.vercel.app/home"
+                class="card-link"
+              >
+                View Project
+              </a>
+              {/* </div> */}
+            </div>
           </div>
-        </div>
-        <div className="project-card-1">
-          <img
-            src={digitalmarket}
-            alt="Project screenshot"
-            class="card-image"
-          />
-          <div class="card-content">
-            <p class="card-description">
-              Simple frontend digital marketing website with react
-            </p>
-            <a
-              href="https://digital-marketing-opal.vercel.app/"
-              class="card-link"
-            >
-              View Project
-            </a>
+          <div className="project-card-1">
+            <img
+              src={digitalmarket}
+              alt="Project screenshot"
+              class="card-image"
+            />
+            <div class="card-content">
+              <p class="card-description">
+                Simple frontend digital marketing website with react
+              </p>
+              <a
+                href="https://digital-marketing-opal.vercel.app/"
+                class="card-link"
+              >
+                View Project
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="project-card-1">
-          <img src={shoolay} alt="Project screenshot" class="card-image" />
-          <div class="card-content">
-            <p class="card-description">On Progess...</p>
-            <a href="/project-link" class="card-link">
-              On Progess
-            </a>
+          <div className="project-card-1">
+            <img src={shoolay} alt="Project screenshot" class="card-image" />
+            <div class="card-content">
+              <p class="card-description">On Progess...</p>
+              <a href="/project-link" class="card-link">
+                On Progess
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="project-card-1">
-          <img src={discordbot} alt="Project screenshot" class="card-image" />
-          <div class="card-content">
-            <p class="card-description">basic discordbot setup code...</p>
-            <a
-              href="https://github.com/dilmohankumar/discord-bot"
-              class="card-link"
-            >
-              View Code
-            </a>
+          <div className="project-card-1">
+            <img src={discordbot} alt="Project screenshot" class="card-image" />
+            <div class="card-content">
+              <p class="card-description">basic discordbot setup code...</p>
+              <a
+                href="https://github.com/dilmohankumar/discord-bot"
+                class="card-link"
+              >
+                View Code
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="project-card-1">
-          <img src={amazon} alt="Project screenshot" class="card-image" />
+          <div className="project-card-1">
+            <img src={amazon} alt="Project screenshot" class="card-image" />
 
-          <div class="card-content">
-            <p class="card-description">
-              Amazon Clone with React, Card Storing System, and Authentication
-              System
-            </p>
-            <a
-              href="https://amazon-clone-hazel-zeta.vercel.app/"
-              class="card-link"
-            >
-              View Project
-            </a>
+            <div class="card-content">
+              <p class="card-description">
+                Amazon Clone with React, Card Storing System, and Authentication
+                System
+              </p>
+              <a
+                href="https://amazon-clone-hazel-zeta.vercel.app/"
+                class="card-link"
+              >
+                View Project
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="project-card-1">
-          <img src={Developer} alt="Project screenshot" class="card-image" />
-          <div class="card-content">
-            <p class="card-description">ON PROGESS</p>
-            <a href="/project-link" class="card-link">
-              ON PROGESS
-            </a>
+          <div className="project-card-1">
+            <img src={Developer} alt="Project screenshot" class="card-image" />
+            <div class="card-content">
+              <p class="card-description">ON PROGESS</p>
+              <a href="/project-link" class="card-link">
+                ON PROGESS
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
+      <div className="github-link">
+        <a href="https://github.com/dilmohankumar">
+          <p className="github-link-p">Check out more on Github</p>
+        </a>
+      </div>
       {/* -------------project-cards-end---------- */}
+      {/* -------------collaboration-company-start------------- */}
+      <div className="collaboration-container">
+        <div className="collaboration-header">
+          <h1>
+            Proud to have collaborated with inspiring companies to bring
+            innovative ideas to life and achieve impactful result
+          </h1>
+        </div>
+        <div className="collaboration-image-container">
+          <div className="collaboration-image">
+            <img src={sn} alt="" />
+          </div>
+          <div className="collaboration-image">
+            <img src={sn} alt="" />
+          </div>
+          <div className="collaboration-image">
+            <img src={sn} alt="" />
+          </div>
+          <div className="collaboration-image">
+            <img src={sn} alt="" />
+          </div>
+          <div className="collaboration-image">
+            <img src={sn} alt="" />
+          </div>
+          <div className="collaboration-image">
+            <img src={sn} alt="" />
+          </div>
+          <div className="collaboration-image">
+            <img src={sn} alt="" />
+          </div>
+        </div>
+      </div>
+      {/* -------------collaboration-company-end------------- */}
+      {/* -----------Startup-Projects-start--------- */}
+      <div className="startup-journey-container">
+        <h1 className="startup-journey-title"> My Startup Journey</h1>
+        <p className="startup-journey-description">
+          {" "}
+          I’m a digital product addict. After diving into hundreds of web and
+          mobile apps across all kinds of industries, I finally had the
+          lightbulb moment: why not channel all this experience into designing
+          and building my own creations? From endless scrolls to swipe-right
+          magic, I’ve seen it all—and now, it’s time to make something uniquely
+          mine
+        </p>
+      </div>
+      {/* -----------Startup-Projects-end--------- */}
+      {/* --------Startup-cards-start-------- */}
+      <div className="startup-cards-container">
+        <div className="startup-card">
+          <img src={sn} alt="" className="startup-card-image" />
+          <p className="startup-card-description">
+            digital marketing website for digital services
+          </p>
+          <a href="https://socialnetworker.in/" className="startup-card-link-1">
+            <span>
+              <OpenInNewIcon className="icon-logo" />
+              socialnetworker.in
+            </span>
+          </a>
+        </div>
+        <div className="startup-card">
+          <img src={Developer} alt="" className="startup-card-image" />
+          <p className="startup-card-description">
+            shoolay best shoes eccomerce site...
+          </p>
+          <a href="/" className="startup-card-link-2">
+            <span>
+              <OpenInNewIcon className="icon-logo" />
+              shoolay.com
+            </span>
+          </a>
+        </div>
+        <div className="startup-card">
+          <img src={Developer} alt="" className="startup-card-image" />
+          <p className="startup-card-description">
+            PayLedger Make easy to track record of rent
+          </p>
+          <a href="/" className="startup-card-link-3">
+            <span>
+              <OpenInNewIcon className="icon-logo" />
+              PayLedger
+            </span>
+          </a>
+        </div>
+        <div className="startup-card">
+          <img src={Dev} alt="" className="startup-card-image" />
+          <p className="startup-card-description">
+            projects are on hold for some time...
+          </p>
+          <a href="/" className="startup-card-link-4">
+            <span>
+              <PauseCircleOutlineIcon className="icon-logo" />
+              On Hold...
+            </span>
+          </a>
+        </div>
+        <div className="startup-card">
+          <img src={Dev} alt="" className="startup-card-image" />
+          <p className="startup-card-description">
+            projects are on hold for some time...
+          </p>
+          <a href="/" className="startup-card-link-5">
+            <span>
+              <PauseCircleOutlineIcon className="icon-logo" />
+              On Hold...
+            </span>
+          </a>
+        </div>
+        <div className="startup-card">
+          <img src={Dev} alt="" className="startup-card-image" />
+          <p className="startup-card-description">
+            projects are on hold for some time...
+          </p>
+          <a href="/" className="startup-card-link-6">
+            <span>
+              <PauseCircleOutlineIcon className="icon-logo" />
+              On Hold...
+            </span>
+          </a>
+        </div>
+        <div className="startup-card">
+          <img src={Developer} alt="" className="startup-card-image" />
+          <p className="startup-card-description">
+            New websites is comming soon in 2025...
+          </p>
+          <a href="/" className="startup-card-link-7">
+            <span>
+              <HandshakeIcon className="icon-logo" />
+              coming soon...
+            </span>
+          </a>
+        </div>
+        <div className="startup-card">
+          <img src={Developer} alt="" className="startup-card-image" />
+          <p className="startup-card-description">
+            New websites is comming soon in 2025...
+          </p>
+          <a href="/" className="startup-card-link-8">
+            <span>
+              <HandshakeIcon className="icon-logo" />
+              coming soon...
+            </span>
+          </a>
+        </div>
+        <div id="increase-width" className="startup-card">
+          <img src={Developer} alt="" className="startup-card-image" />
+          <p className="startup-card-description">
+            New websites is comming soon in 2025...
+          </p>
+          <a href="/" className="startup-card-link-9">
+            <span>
+              <HandshakeIcon className="icon-logo" />
+              coming soon...
+            </span>
+          </a>
+        </div>
+      </div>
+      {/* --------Startup-cards-end-------- */}
     </div>
   );
 };

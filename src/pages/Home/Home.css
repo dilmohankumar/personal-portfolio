@@ -59,7 +59,7 @@ p {
   gap: 1rem;
 }
 .bio-container h1,
-p {
+.bio-container p {
   width: 70%;
   letter-spacing: 0.8px;
   top: 1rem;
@@ -174,16 +174,20 @@ p {
 .project-cards-container {
   color: white;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  gap: 25px;
+  padding: 5rem;
 }
 .project-card-1 {
   border: 1px solid rgb(220, 218, 218);
   border-radius: 1rem;
   position: relative;
-  width: 300px;
-  height: 200px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.2 / 1;
+  box-sizing: border-box;
+  align-items: stretch;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -193,10 +197,11 @@ p {
 }
 .project-card-1 img {
   width: 100%;
-  height: 200px;
+  height: auto;
   object-fit: cover;
   border-radius: 1rem;
   display: block;
+  aspect-ratio: 1.2 / 1;
   transition: opacity 0.3s ease;
 }
 .card-content {
@@ -211,7 +216,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color:#141c3a;
+  background-color: #141c3a;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -231,7 +236,6 @@ p {
   font-weight: 900;
   text-align: center;
   font-family: cursive;
-  
 }
 .card-link {
   color: white;
@@ -247,4 +251,143 @@ p {
 }
 .card-link:hover {
   background-color: #420355;
+}
+.github-link {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  color: #420355;
+}
+.github-link p {
+  border: 1px solid #420355;
+  padding: 10px;
+  padding: 10px 3rem 10px 3rem;
+  border-radius: 20px;
+}
+.github-link a {
+  text-decoration: none;
+}
+.github-link p:hover {
+  color: white;
+  background-color: #420355;
+}
+.collaboration-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+  top: 10rem;
+  position: relative;
+}
+.collaboration-header h1 {
+  width: 70%;
+}
+.collaboration-image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 5rem;
+  top: 10rem;
+  position: relative;
+  margin-bottom: 20rem;
+}
+.collaboration-image {
+  display: flex;
+  justify-content: center;
+  border: 1px solid rebeccapurple;
+  border-radius: 10px;
+}
+.startup-journey-container h1,
+.startup-journey-container p {
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-family: sans-serif;
+}
+.startup-journey-container {
+  background-image: linear-gradient(#420355 0%, rgb(0, 136, 255) 100%);
+  padding: 15rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.startup-journey-title {
+  margin-top: -8rem;
+  font-size: 2.5rem;
+}
+.startup-journey-container p {
+  font-size: 1.2rem;
+}
+.startup-cards-container {
+  margin-top: -8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  row-gap: 2rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+.startup-card {
+  border: 1px solid rgb(218, 215, 215);
+  padding: 4rem;
+  border-radius: 1rem;
+  background-color: rgb(255, 255, 255);
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.startup-card-image {
+  width: 50%;
+}
+.startup-card a {
+  text-decoration: none;
+}
+.startup-card-link-1,
+.startup-card-link-2,
+.startup-card-link-3 {
+  color: #0f95ee;
+  background: #42bdeb29;
+  padding: 6px;
+  border-radius: 5px;
+}
+.startup-card-link-4,
+.startup-card-link-5,
+.startup-card-link-6 {
+  color: #ef0909;
+  background: #eb4b4229;
+  padding: 6px;
+  border-radius: 5px;
+}
+.startup-card-link-7,
+.startup-card-link-8,
+.startup-card-link-9 {
+  color: #3fad08;
+  background: #39d73429;
+  padding: 6px;
+  border-radius: 5px;
+}
+.startup-card span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3px;
+}
+.icon-logo {
+  width: 18px !important;
+  height: auto !important;
 }
