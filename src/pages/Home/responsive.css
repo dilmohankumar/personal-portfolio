@@ -194,7 +194,43 @@
   .slider {
     font-size: 14px;
   }
-  .authorname{
+  .authorname {
     font-size: 20px !important;
+  }
+}
+@media (max-width: 1045px) {
+  .project-title {
+    font-size: 27px;
+  }
+  .project-link {
+    font-size: 15px;
+  }
+  .child-banner {
+    gap: 1rem;
+  }
+}
+@media (max-width: 752px) {
+  .child-banner {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (max-width: 890px) {
+  .child-banner {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (max-width: 500px) {
+  .child-banner {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media (max-width: 432px) {
+  .child-banner {
+    padding: 2rem;
   }
 }

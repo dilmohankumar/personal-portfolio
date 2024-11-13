@@ -17,28 +17,29 @@ import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
 import HandshakeIcon from "@mui/icons-material/Handshake";
 import { Link } from "react-router-dom";
 import ChatIcon from "@mui/icons-material/Chat";
+import SportsHandballIcon from "@mui/icons-material/SportsHandball";
 const Home = () => {
   const slides = [
     {
-      text: "Matt was a real pleasure to work with and we look forward to working with him again. He’s definitely the kind of designer you can trust with a project from start to finish.",
+      text: "Working with Dilmohan was a fantastic experience, and we’re eager to collaborate with him again. He’s a designer you can fully trust from start to finish.",
       name: "Pascal Tremblay",
       title: "Creative Lead",
       company: "Good Kind",
       image: Developer,
     },
     {
-      text: "Matt’s technical and design skills are exceptional. He always finds a way to deliver above expectations and on time.",
+      text: "Dilmohan’s technical and design skills are outstanding. He consistently delivers beyond expectations and always on schedule.",
       name: "Developer Team",
       title: "Tech Co.",
-      company: "fsdf",
-      image: amazon,
+      company: "Amazon",
+      image: Developer,
     },
     {
-      text: "Matt brought incredible creativity and clarity to our brand refresh. His work helped us connect with our audience in new ways.",
+      text: "Dilmohan infused creativity and clarity into our brand refresh. His work allowed us to engage with our audience in impactful new ways.",
       name: "Marketing Director",
       title: "Shoolay Inc.",
-      company: "fsdfs",
-      image: shoolay,
+      company: "Shoolay",
+      image: Developer,
     },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -441,7 +442,7 @@ const Home = () => {
       <div className="slider">
         <div className="childslider">
           <h1>User Feedback</h1>
-          <p>People I've worked with have said some nice things...</p>
+          <p>Colleagues value my commitment and collaborative approach...</p>
           <div className="slide">
             <img
               src={slides[currentIndex].image}
@@ -474,6 +475,21 @@ const Home = () => {
         </div>
       </div>
       {/* -------Testimonials-end------- */}
+      {/* ------start-project-banner-start----- */}
+      <div className="project-container">
+        <div className="child-banner">
+          <h1 className="project-title">Build Project</h1>
+          <p className="project-description">
+            I’d love to connect! Let me know a time that works, and I’ll bring
+            some ideas to the table
+          </p>
+          <Link to="/" className="project-link">
+            <SportsHandballIcon />
+            Excited to start this!
+          </Link>
+        </div>
+      </div>
+      {/* ------start-project-banner-end----- */}
     </div>
   );
 };

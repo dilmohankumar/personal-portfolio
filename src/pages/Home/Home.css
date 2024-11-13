@@ -474,3 +474,48 @@ p {
   font-weight: 600;
   font-size: 23px !important;
 }
+.project-container {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+}
+.child-banner {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #043453;
+  color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  gap: 3rem;
+}
+.project-link {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  border: 1px solid rgb(28, 249, 212);
+  border-radius: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  white-space: nowrap;
+}
+.project-link:hover {
+  color: black;
+  background-color: rgb(28, 249, 212);
+}
+.project-title {
+  white-space: nowrap;
+  font-weight: 500;
+}
+.child-banner p{
+  font-size: 13px;
+}
