@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import "./Home.css";
 import "./responsive.css";
 import user from "../../assests/user.png";
@@ -15,7 +15,47 @@ import sn from "../../assests/sn.png";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
 import HandshakeIcon from "@mui/icons-material/Handshake";
+import { Link } from "react-router-dom";
+import ChatIcon from "@mui/icons-material/Chat";
 const Home = () => {
+  const slides = [
+    {
+      text: "Matt was a real pleasure to work with and we look forward to working with him again. He’s definitely the kind of designer you can trust with a project from start to finish.",
+      name: "Pascal Tremblay",
+      title: "Creative Lead",
+      company: "Good Kind",
+      image: Developer,
+    },
+    {
+      text: "Matt’s technical and design skills are exceptional. He always finds a way to deliver above expectations and on time.",
+      name: "Developer Team",
+      title: "Tech Co.",
+      company: "fsdf",
+      image: amazon,
+    },
+    {
+      text: "Matt brought incredible creativity and clarity to our brand refresh. His work helped us connect with our audience in new ways.",
+      name: "Marketing Director",
+      title: "Shoolay Inc.",
+      company: "fsdfs",
+      image: shoolay,
+    },
+  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  // const goToPrevious = () => {
+  //   setCurrentIndex((prevIndex) => {
+  //     return prevIndex === 0 ? slides.length - 1 : prevIndex - 1;
+  //   });
+  // };
+  // const goToNext = () => {
+  //   setCurrentIndex((prevIndex) => {
+  //     return prevIndex === slides.length - 1 ? 0 : prevIndex + 1;
+  //   });
+  // };
+  // useEffect(() => {
+  //   const interval = setInterval(goToNext, 3000);
+  //   return () => clearInterval(interval);
+  // }, [currentIndex]);
   return (
     <div className="home-container">
       <div className="home-content">
@@ -126,83 +166,93 @@ const Home = () => {
             <img
               src={Hotelbooking}
               alt="Project screenshot"
-              class="card-image"
+              className="card-image"
             />
-            {/* <div className="card"> */}
-            <div class="card-content">
-              <p class="card-description">
+            <div className="card-content">
+              <p className="card-description">
                 Hotelbooking webiste with backend data storing on MongoDB and
                 with user authenticaion system
               </p>
               <a
                 href="https://hotel-booking-coral-pi.vercel.app/home"
-                class="card-link"
+                className="card-link"
               >
                 View Project
               </a>
-              {/* </div> */}
             </div>
           </div>
           <div className="project-card-1">
             <img
               src={digitalmarket}
               alt="Project screenshot"
-              class="card-image"
+              className="card-image"
             />
-            <div class="card-content">
-              <p class="card-description">
+            <div className="card-content">
+              <p className="card-description">
                 Simple frontend digital marketing website with react
               </p>
               <a
                 href="https://digital-marketing-opal.vercel.app/"
-                class="card-link"
+                className="card-link"
               >
                 View Project
               </a>
             </div>
           </div>
           <div className="project-card-1">
-            <img src={shoolay} alt="Project screenshot" class="card-image" />
-            <div class="card-content">
-              <p class="card-description">On Progess...</p>
-              <a href="/project-link" class="card-link">
+            <img
+              src={shoolay}
+              alt="Project screenshot"
+              className="card-image"
+            />
+            <div className="card-content">
+              <p className="card-description">On Progess...</p>
+              <a href="/project-link" className="card-link">
                 On Progess
               </a>
             </div>
           </div>
           <div className="project-card-1">
-            <img src={discordbot} alt="Project screenshot" class="card-image" />
-            <div class="card-content">
-              <p class="card-description">basic discordbot setup code...</p>
+            <img
+              src={discordbot}
+              alt="Project screenshot"
+              className="card-image"
+            />
+            <div className="card-content">
+              <p className="card-description">basic discordbot setup code...</p>
               <a
                 href="https://github.com/dilmohankumar/discord-bot"
-                class="card-link"
+                className="card-link"
               >
                 View Code
               </a>
             </div>
           </div>
           <div className="project-card-1">
-            <img src={amazon} alt="Project screenshot" class="card-image" />
+            <img src={amazon} alt="Project screenshot" className="card-image" />
 
-            <div class="card-content">
-              <p class="card-description">
+            <div className="card-content">
+              <p className="card-description">
                 Amazon Clone with React, Card Storing System, and Authentication
                 System
               </p>
               <a
                 href="https://amazon-clone-hazel-zeta.vercel.app/"
-                class="card-link"
+                className="card-link"
               >
                 View Project
               </a>
             </div>
           </div>
           <div className="project-card-1">
-            <img src={Developer} alt="Project screenshot" class="card-image" />
-            <div class="card-content">
-              <p class="card-description">ON PROGESS</p>
-              <a href="/project-link" class="card-link">
+            <img
+              src={Developer}
+              alt="Project screenshot"
+              className="card-image"
+            />
+            <div className="card-content">
+              <p className="card-description">ON PROGESS</p>
+              <a href="/project-link" className="card-link">
                 ON PROGESS
               </a>
             </div>
@@ -374,6 +424,56 @@ const Home = () => {
         </div>
       </div>
       {/* --------Startup-cards-end-------- */}
+      {/* --------collab-start------- */}
+      <div className="collaboration-section">
+        <h1 className="collaboration-title">Excited to collaborate with me?</h1>
+        <p className="collaboration-text">
+          I am always open to exploring opportunities for collaborating in
+          product design or potential partnerships.
+        </p>
+        <Link to="/" className="collaboration-link">
+          <ChatIcon className="collaboration-icon" />
+          Let’s start a conversation
+        </Link>
+      </div>
+      {/* --------collab-end------- */}
+      {/* -------Testimonials-start------- */}
+      <div className="slider">
+        <div className="childslider">
+          <h1>User Feedback</h1>
+          <p>People I've worked with have said some nice things...</p>
+          <div className="slide">
+            <img
+              src={slides[currentIndex].image}
+              alt={`${slides[currentIndex].name}'s profile`}
+              className="profile-image"
+              style={{
+                width: "70px",
+                height: "70px",
+                borderRadius: "50%",
+                marginBottom: "10px",
+              }}
+            />
+            <p>{slides[currentIndex].text}</p>
+            <div className="authorcontainer">
+              <p className="authorname"> {slides[currentIndex].name}</p>,{" "}
+              {slides[currentIndex].title}
+              {slides[currentIndex].company &&
+                `, ${slides[currentIndex].company}`}
+            </div>
+          </div>
+        </div>
+        <div className="dots">
+          {slides.map((_, index) => (
+            <span
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={index === currentIndex ? "dot active" : "dot"}
+            ></span>
+          ))}
+        </div>
+      </div>
+      {/* -------Testimonials-end------- */}
     </div>
   );
 };

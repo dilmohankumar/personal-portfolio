@@ -171,17 +171,30 @@
   }
 }
 @media (max-width: 1000px) {
-  .startup-cards-container{
+  .startup-cards-container {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
 @media (max-width: 782px) {
-  .startup-cards-container{
+  .startup-cards-container {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
 }
 @media (max-width: 470px) {
-  .startup-cards-container{
+  .startup-cards-container {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+@media (max-width: 400px) {
+  .collaboration-link {
+    width: 8rem;
+  }
+}
+@media (max-width: 900px) {
+  .slider {
+    font-size: 14px;
+  }
+  .authorname{
+    font-size: 20px !important;
   }
 }
