@@ -234,3 +234,24 @@
     padding: 2rem;
   }
 }
+@media (max-width: 752px) {
+  .footer-container {
+    margin-top: -6rem;
+  }
+  .footer-text {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 429px) {
+  .footer-social {
+    width: 20rem;
+  }
+  .footer-text {
+    width: 21rem;
+  }
+}
+@media (max-width: 340px) {
+  .footer-social {
+    width: 20rem;
+  }
+}

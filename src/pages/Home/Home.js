@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import "./Home.css";
 import "./responsive.css";
 import user from "../../assests/user.png";
@@ -11,6 +11,7 @@ import digitalmarket from "../../assests/digitalmarket.jpg";
 import discordbot from "../../assests/discordbot.jpg";
 import shoolay from "../../assests/shoolay.jpg";
 import amazon from "../../assests/amazoneclone.jpg";
+import logo from "../../assests/logo.png";
 import sn from "../../assests/sn.png";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
@@ -18,45 +19,45 @@ import HandshakeIcon from "@mui/icons-material/Handshake";
 import { Link } from "react-router-dom";
 import ChatIcon from "@mui/icons-material/Chat";
 import SportsHandballIcon from "@mui/icons-material/SportsHandball";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import XIcon from "@mui/icons-material/X";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 const Home = () => {
   const slides = [
     {
       text: "Working with Dilmohan was a fantastic experience, and we’re eager to collaborate with him again. He’s a designer you can fully trust from start to finish.",
-      name: "Pascal Tremblay",
+      name: "Danish",
       title: "Creative Lead",
-      company: "Good Kind",
+      company: " Digital marketing",
       image: Developer,
     },
     {
       text: "Dilmohan’s technical and design skills are outstanding. He consistently delivers beyond expectations and always on schedule.",
-      name: "Developer Team",
+      name: "johan",
       title: "Tech Co.",
       company: "Amazon",
       image: Developer,
     },
     {
       text: "Dilmohan infused creativity and clarity into our brand refresh. His work allowed us to engage with our audience in impactful new ways.",
-      name: "Marketing Director",
+      name: "pushkar",
       title: "Shoolay Inc.",
       company: "Shoolay",
       image: Developer,
     },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
-  // const goToPrevious = () => {
-  //   setCurrentIndex((prevIndex) => {
-  //     return prevIndex === 0 ? slides.length - 1 : prevIndex - 1;
-  //   });
-  // };
-  // const goToNext = () => {
-  //   setCurrentIndex((prevIndex) => {
-  //     return prevIndex === slides.length - 1 ? 0 : prevIndex + 1;
-  //   });
-  // };
-  // useEffect(() => {
-  //   const interval = setInterval(goToNext, 3000);
-  //   return () => clearInterval(interval);
-  // }, [currentIndex]);
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => {
+      return prevIndex === slides.length - 1 ? 0 : prevIndex + 1;
+    });
+  };
+  useEffect(() => {
+    const interval = setInterval(goToNext, 3000);
+    return () => clearInterval(interval);
+  });
   return (
     <div className="home-container">
       <div className="home-content">
@@ -457,10 +458,10 @@ const Home = () => {
             />
             <p>{slides[currentIndex].text}</p>
             <div className="authorcontainer">
-              <p className="authorname"> {slides[currentIndex].name}</p>,{" "}
+              <p className="authorname"> {slides[currentIndex].name}</p>{" "}
               {slides[currentIndex].title}
               {slides[currentIndex].company &&
-                `, ${slides[currentIndex].company}`}
+                ` - ${slides[currentIndex].company}`}
             </div>
           </div>
         </div>
@@ -490,6 +491,45 @@ const Home = () => {
         </div>
       </div>
       {/* ------start-project-banner-end----- */}
+      {/* --------footer-start------- */}
+      <div className="footer-container">
+        {/* <Link to="/" className="logo-link"> */}
+          <img src={logo} alt="logo" className="logo-imagee" />
+        {/* </Link> */}
+        <p className="footer-text">
+          Growing, gaining wisdom, and striving for progress with each new day
+        </p>
+        <div className="footer-social">
+        <a href="/" aria-label="Facebook" className="social-link">
+          <i className="fab fa-facebook">
+            <FacebookIcon />
+          </i>
+        </a>
+        <a href="/" aria-label="Twitter" className="social-link">
+          <i className="fab fa-twitter">
+            <XIcon />
+          </i>
+        </a>
+        <a href="/" aria-label="Instagram" className="social-link">
+          <i className="fab fa-instagram">
+            <InstagramIcon />
+          </i>
+        </a>
+        <a href="/" aria-label="LinkedIn" className="social-link">
+          <i className="fab fa-linkedin">
+            <LinkedInIcon />
+          </i>
+        </a>
+        <a href="/" aria-label="Github" className="social-link">
+          <i className="fab fa-Github">
+            <GitHubIcon />
+          </i>
+        </a></div>
+        <p className="footer-copyright">
+          &copy; 2024 OnestCoder. All Rights Reserved.
+        </p>
+      </div>
+      {/* --------footer-end------- */}
     </div>
   );
 };
