@@ -13,6 +13,18 @@ const Header = () => {
   };
   const menuRef = useRef(null);
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 700 && !showMenu) {
+        setshowMenu(true); // Close the menu when resizing to a large screen
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [showMenu]);
+  
+  useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setshowMenu(true);
