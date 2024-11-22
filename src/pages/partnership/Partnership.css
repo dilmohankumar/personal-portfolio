@@ -1,0 +1,46 @@
+.tweak-notification {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.tweak-notificationw {
+  top: 1rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.tweak-message {
+  font-size: 2rem;
+}
+.developer-image-containers {
+  display: flex;
+  justify-content: center;
+}
+.developer-images {
+  width: 50%;
+  height: auto;
+  top: -3rem;
+  position: relative;
+  margin-top: 1rem;
+  z-index: -1;
+}
+.bio-container p {
+  font-size: 1.6rem;
+}
+#skill-cards,
+#skill-cards-2,
+#skill-cards-3 {
+ border-radius: 1rem;
+ border: 1px solid rgba(169, 164, 164, 0.641);
+  margin: 10px;
+  background-color: white;
+  padding: 6px;
+}
+#skills-containers {
+  background: none;
+  border: none;
+}

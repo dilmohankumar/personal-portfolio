@@ -1,0 +1,13 @@
+@media (max-width: 707px) {
+  .tweak-message {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 500px) {
+  .tweak-message {
+    font-size: 1.5rem;
+  }
+  .guidance-message {
+    font-size: 0.9rem;
+  }
+}

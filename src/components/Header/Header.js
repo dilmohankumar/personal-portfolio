@@ -23,7 +23,7 @@ const Header = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [showMenu]);
-  
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -41,11 +41,13 @@ const Header = () => {
     <header>
       <div className="header-container">
         <div className="header-logo">
-          <img
-            src={Logo}
-            style={{ width: "5rem", height: "5rem" }}
-            alt="logo"
-          ></img>
+          <Link to="/">
+            <img
+              src={Logo}
+              style={{ width: "5rem", height: "5rem" }}
+              alt="logo"
+            />
+          </Link>
         </div>
         {/* ---menu-icon-start--- */}
         <div className="menu-icon" onClick={toggleMenu}>
@@ -58,10 +60,10 @@ const Header = () => {
         >
           <ul className="header-list">
             <li className="learningp">
-              <Link to="/learning-partnership">Learning Partnership</Link>
+              <Link to="/partnership">Learning Partnership</Link>
             </li>
             <li className="sendMessage">
-              <Link to="/send-message">Send Message</Link>
+              <Link to="/messform">Send Message</Link>
             </li>
             <div className="linee"></div>
           </ul>

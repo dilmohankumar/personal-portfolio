@@ -1,29 +1,23 @@
-import { React, useState, useEffect } from "react";
-import "./Home.css";
-import "./responsive.css";
-import user from "../../assests/user.png";
-import Developer from "../../assests/developer.png";
-import Dev from "../../assests/dev.png";
-import mentor from "../../assests/mentor.jpg";
-import cd from "../../assests/cd.jpg";
-import Hotelbooking from "../../assests/hotel-booking.jpg";
-import digitalmarket from "../../assests/digitalmarket.jpg";
-import discordbot from "../../assests/discordbot.jpg";
-import shoolay from "../../assests/shoolay.jpg";
-import amazon from "../../assests/amazoneclone.jpg";
-import logo from "../../assests/logo.png";
-import sn from "../../assests/sn.png";
+import ChatIcon from "@mui/icons-material/Chat";
+import HandshakeIcon from "@mui/icons-material/Handshake";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
-import HandshakeIcon from "@mui/icons-material/Handshake";
-import { Link } from "react-router-dom";
-import ChatIcon from "@mui/icons-material/Chat";
 import SportsHandballIcon from "@mui/icons-material/SportsHandball";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import XIcon from "@mui/icons-material/X";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import { React, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import amazon from "../../assests/amazoneclone.jpg";
+import cd from "../../assests/cd.jpg";
+import Dev from "../../assests/dev.png";
+import Developer from "../../assests/developer.png";
+import digitalmarket from "../../assests/digitalmarket.jpg";
+import discordbot from "../../assests/discordbot.jpg";
+import Hotelbooking from "../../assests/hotel-booking.jpg";
+import mentor from "../../assests/mentor.jpg";
+import shoolay from "../../assests/shoolay.jpg";
+import sn from "../../assests/sn.png";
+import user from "../../assests/user.png";
+import "./Home.css";
+import "./responsive.css";
 const Home = () => {
   const slides = [
     {
@@ -493,44 +487,7 @@ const Home = () => {
         </div>
       </div>
       {/* ------start-project-banner-end----- */}
-      {/* --------footer-start------- */}
-      <div className="footer-container">
-        <img src={logo} alt="logo" className="logo-imagee" />
-        <p className="footer-text">
-          Growing, gaining wisdom, and striving for progress with each new day
-        </p>
-        <div className="footer-social">
-          <a href="/" aria-label="Facebook" className="social-link">
-            <i className="fab fa-facebook">
-              <FacebookIcon />
-            </i>
-          </a>
-          <a href="/" aria-label="Twitter" className="social-link">
-            <i className="fab fa-twitter">
-              <XIcon />
-            </i>
-          </a>
-          <a href="/" aria-label="Instagram" className="social-link">
-            <i className="fab fa-instagram">
-              <InstagramIcon />
-            </i>
-          </a>
-          <a href="/" aria-label="LinkedIn" className="social-link">
-            <i className="fab fa-linkedin">
-              <LinkedInIcon />
-            </i>
-          </a>
-          <a href="/" aria-label="Github" className="social-link">
-            <i className="fab fa-Github">
-              <GitHubIcon />
-            </i>
-          </a>
-        </div>
-        <p className="footer-copyright">
-          &copy; 2024 OnestCoder. All Rights Reserved.
-        </p>
-      </div>
-      {/* --------footer-end------- */}
+     
     </div>
   );
 };
