@@ -1,18 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Header.css";
 import "./responsive.css";
 import Logo from "./../../assests/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-
+import { Link } from "react-router-dom";
 const Header = () => {
   const [showMenu, setshowMenu] = useState(true);
   const toggleMenu = () => {
     setshowMenu(!showMenu);
+    document.body.style.overflow = showMenu ? "hidden" : "auto";
   };
-  const hideMenu = () => {
-    setshowMenu(!showMenu);
-  };
+  const menuRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setshowMenu(true);
+        document.body.style.overflow = "auto"; // Enable scrolling
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <header>
       <div className="header-container">
@@ -28,15 +40,18 @@ const Header = () => {
           {showMenu ? <MenuIcon /> : <CloseIcon />}
         </div>
         {/* ---menu-icon-end--- */}
-        <div className={showMenu ? "show-nav-wrapper" : "nav-wrapper"}>
-          <ul
-            className="header-list"
-            id={!showMenu ? "mobile-header-list" : "hide-mobile-header-list"}
-          >
-            <li onClick={hideMenu}>Learning Partnership</li>
-            <li className="sendMessage" onClick={hideMenu}>
-              Send Message
+        <div
+          ref={menuRef}
+          className={showMenu ? "show-nav-wrapper" : "nav-wrapper"}
+        >
+          <ul className="header-list">
+            <li className="learningp">
+              <Link to="/learning-partnership">Learning Partnership</Link>
             </li>
+            <li className="sendMessage">
+              <Link to="/send-message">Send Message</Link>
+            </li>
+            <div className="linee"></div>
           </ul>
         </div>
       </div>

@@ -67,6 +67,7 @@ const Home = () => {
           work.
         </p>
       </div>
+      <div className="image-container-p">
       <div className="image-container">
         <img src={user} alt="user-image" className="user-image" />
         <img
@@ -74,7 +75,7 @@ const Home = () => {
           alt="developer-image"
           className="developer-image"
         />
-      </div>
+      </div></div>
       {/* -----bio start----- */}
       <div className="bio-container">
         <h1 className="bio-title">Hey! I'm Dilmohan Let's have some fun.</h1>
@@ -268,6 +269,7 @@ const Home = () => {
       </div>
       {/* -------------project-cards-end---------- */}
       {/* -------------collaboration-company-start------------- */}
+      <div className="lines"></div>
       <div className="collaboration-container">
         <div className="collaboration-header">
           <h1>
@@ -493,38 +495,37 @@ const Home = () => {
       {/* ------start-project-banner-end----- */}
       {/* --------footer-start------- */}
       <div className="footer-container">
-        {/* <Link to="/" className="logo-link"> */}
-          <img src={logo} alt="logo" className="logo-imagee" />
-        {/* </Link> */}
+        <img src={logo} alt="logo" className="logo-imagee" />
         <p className="footer-text">
           Growing, gaining wisdom, and striving for progress with each new day
         </p>
         <div className="footer-social">
-        <a href="/" aria-label="Facebook" className="social-link">
-          <i className="fab fa-facebook">
-            <FacebookIcon />
-          </i>
-        </a>
-        <a href="/" aria-label="Twitter" className="social-link">
-          <i className="fab fa-twitter">
-            <XIcon />
-          </i>
-        </a>
-        <a href="/" aria-label="Instagram" className="social-link">
-          <i className="fab fa-instagram">
-            <InstagramIcon />
-          </i>
-        </a>
-        <a href="/" aria-label="LinkedIn" className="social-link">
-          <i className="fab fa-linkedin">
-            <LinkedInIcon />
-          </i>
-        </a>
-        <a href="/" aria-label="Github" className="social-link">
-          <i className="fab fa-Github">
-            <GitHubIcon />
-          </i>
-        </a></div>
+          <a href="/" aria-label="Facebook" className="social-link">
+            <i className="fab fa-facebook">
+              <FacebookIcon />
+            </i>
+          </a>
+          <a href="/" aria-label="Twitter" className="social-link">
+            <i className="fab fa-twitter">
+              <XIcon />
+            </i>
+          </a>
+          <a href="/" aria-label="Instagram" className="social-link">
+            <i className="fab fa-instagram">
+              <InstagramIcon />
+            </i>
+          </a>
+          <a href="/" aria-label="LinkedIn" className="social-link">
+            <i className="fab fa-linkedin">
+              <LinkedInIcon />
+            </i>
+          </a>
+          <a href="/" aria-label="Github" className="social-link">
+            <i className="fab fa-Github">
+              <GitHubIcon />
+            </i>
+          </a>
+        </div>
         <p className="footer-copyright">
           &copy; 2024 OnestCoder. All Rights Reserved.
         </p>

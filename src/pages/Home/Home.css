@@ -40,6 +40,26 @@ p {
   height: 110vh;
   z-index: -1;
 }
+.image-container .developer-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.image-container-p {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.developer-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
 .image-container .user-image {
   width: 20%;
   height: auto;
@@ -48,15 +68,18 @@ p {
   background-color: rgb(0, 136, 255);
   color: white;
   width: 100%;
-  height: 90vh;
   margin-top: -9rem;
-  padding-top: 8rem;
   display: flex;
+  padding-top: 8rem;
+  padding-bottom: 15rem;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
   gap: 1rem;
+  height: auto;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 .bio-container h1,
 .bio-container p {
@@ -70,7 +93,7 @@ p {
 }
 .bio-container p {
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 .skills-container {
   padding-top: -10rem;
@@ -572,4 +595,9 @@ p {
 }
 .social-link {
   color: white;
+}
+.lines {
+  border: 1px solid #b6b7b74d;
+  top: 5rem;
+  position: relative;
 }

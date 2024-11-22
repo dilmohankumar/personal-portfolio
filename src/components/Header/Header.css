@@ -10,13 +10,26 @@
   display: flex;
   gap: 2rem;
   list-style: none;
-  font-family: "Itim", cursive;
+  font-family: "Itim";
 }
 .header-list li {
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.header-list li a {
+  text-decoration: none;
+  color: black;
+}
+.sendMessage:hover {
+  background-color: rgb(0, 157, 255);
+}
+.sendMessage:hover a {
+  color: white;
+}
+.learningp a:hover {
+  color: blueviolet;
 }
 .sendMessage {
   border-radius: 2rem;
@@ -26,4 +39,10 @@
 }
 .menu-icon {
   cursor: pointer;
+  z-index: 5;
 }
+.nav-wrapper{
+  position: fixed;
+}
+
+

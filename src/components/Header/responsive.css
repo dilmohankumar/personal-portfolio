@@ -8,50 +8,76 @@
 }
 @media (max-width: 700px) {
   .header-list {
-    display: block;
-  }
-  #mobile-header-list,
-  #hide-mobile-header-list,
-  .nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: rgb(190, 230, 242);
     position: fixed;
-    top: 12px;
-    left: 12rem;
-    width: 34%;
-    height: 14vh;
-    /* background-color: rgb(168 218 231); */
-    padding: 0rem 1rem 0rem 1rem;
-    transition: all 0.3s;
+    right: 7rem;
+    top: 2rem;
+    width: 26%;
+    height: 32%;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    border-radius: 7px;
+    gap: 2rem;
   }
-  #mobile-header-list li,
-  #hide-mobile-header-list li {
-    padding: 7px 0px 7px 10px;
+  .learningp a {
+    padding: 5px 1rem;
+    border-bottom: 3px solid transparent;
   }
-  #mobile-header-list {
-    transform: translateX(0);
+  .learningp a:hover {
+    background-color: rgb(183 181 186 / 32%);
   }
-  #hide-mobile-header-list {
-    transform: translateX(200%);
+
+  .sendMessage a {
+    padding: 5px 2.5rem;
+    border-bottom: 3px solid transparent;
+  }
+  .sendMessage a:hover {
+    background-color:rgb(183 181 186 / 32%);
+    padding: 5px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .header-list li {
+    position: relative;
+    top: 2rem;
+  }
+  .sendMessage {
+    border-radius: none;
+    border: none;
+    padding: 0;
+    height: 0;
+  }
+  .linee {
+    border-bottom: 1px solid rgb(205, 205, 205);
+    width: 100%;
+    position: relative;
+    top: 2rem;
+    margin-top: 1rem;
   }
   .show-nav-wrapper {
     display: none;
   }
 }
-@media (max-width: 553px) {
-  #mobile-header-list,
-  #hide-mobile-header-list,
-  .nav-wrapper {
-    top: 5rem;
-    left: 10rem;
+@media (max-width: 435px) {
+  .learningp a:hover {
+    padding: 5px 0rem;
   }
 }
-@media (max-width: 375px) {
-  #mobile-header-list,
-  #hide-mobile-header-list,
-  .nav-wrapper {
-    top: 5rem;
-    left: 8rem;
+@media (max-width: 542px) {
+  .sendMessage a:hover {
+    padding: 5px 1.5rem;
   }
-  .sendMessage {
-    padding: 11px 0px 11px 10px;
+}
+@media (max-width: 419px) {
+  .sendMessage a:hover {
+    padding: 5px 1rem;
+  }
+}
+@media (max-width: 356px) {
+  .sendMessage a:hover {
+    padding: 5px 0.5rem;
   }
 }
