@@ -479,7 +479,7 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 8rem;
   font-family: sans-serif;
   letter-spacing: 0.5px;
   gap: 2rem;
@@ -507,6 +507,7 @@ p {
   display: flex;
   justify-content: center;
   font-family: sans-serif;
+  margin-top: 4rem;
 }
 .child-banner {
   width: 70%;

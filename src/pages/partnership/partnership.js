@@ -14,8 +14,51 @@ import Developer from "../../assests/developer.png";
 import "./Partnership.css";
 import "./responsive.css";
 import Maptree from "../../assests/maptree.jpg";
-
+import sn from "../../assests/sn.png";
+import facebook from "../../assests/facebook.png";
+import indeed from "../../assests/indeed.png";
+import microsoft from "../../assests/microsoft.png";
+import netflix from "../../assests/netflix.png";
+import sony from "../../assests/sony.png";
+import FingerprintIcon from "@mui/icons-material/Fingerprint";
+import YardOutlinedIcon from "@mui/icons-material/YardOutlined";
+import BalanceSharpIcon from "@mui/icons-material/BalanceSharp";
+import TakeoutDiningIcon from "@mui/icons-material/TakeoutDining";
+import { useEffect, useState } from "react";
 const Partnership = () => {
+  const slides = [
+    {
+      text: "problem-solver who truly cares about growth and development. His guidance has been invaluable in helping me refine my skills and think critically about my work",
+      name: "Danish",
+      title: "Creative Lead",
+      company: " Digital marketing",
+      image: Developer,
+    },
+    {
+      text: "Dilmohan enthusiasm for design and fresh approach consistently challenged me to think differently and improve my problem-solving skills. He’s highly skilled and deeply invested in the growth of those he mentors",
+      name: "johan",
+      title: "Tech Co.",
+      company: "Amazon",
+      image: Developer,
+    },
+    {
+      text: "Dilmohan not only helped pave the way for my career growth but did so with warmth and an approachable demeanor. His determination is contagious, and spending time with him will leave you inspired to develop the same resilience.",
+      name: "khalid",
+      title: "Shoolay Inc.",
+      company: "Shoolay",
+      image: Developer,
+    },
+  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => {
+      return prevIndex === slides.length - 1 ? 0 : prevIndex + 1;
+    });
+  };
+  useEffect(() => {
+    const interval = setInterval(goToNext, 3000);
+    return () => clearInterval(interval);
+  });
   const navigate = useNavigate();
   return (
     <>
@@ -108,7 +151,7 @@ const Partnership = () => {
       </div>
       {/* ------end-container----- */}
       <div className="mparent">
-        <div className="mentorship-container">
+        <div className="mentorship-containerr">
           <h1 className="mentorship-title">
             If you're looking to grow, mentorship can make a difference
           </h1>
@@ -180,9 +223,126 @@ const Partnership = () => {
         <p className="mentorship-message">
           I’ve worked with and mentored talented designers across the globe.
         </p>
-        <img src={Maptree} alt="Maptree" style={{ width: "80%", height: "auto" }} />
+        <img
+          src={Maptree}
+          alt="Maptree"
+          style={{ width: "80%", height: "auto" }}
+        />
+      </div>
+      <div className="contributionp">
+        <div className="contribution-container">
+          <h1 className="contribution-title">
+            countless professionals have contributed to renowned companies
+          </h1>
+          <div className="company-logos">
+            <img src={sn} alt="Company Logo" className="company-logoo" />
+            <img src={facebook} alt="Facebook Logo" className="company-logo" />
+            <img src={indeed} alt="Indeed Logo" className="company-logo" />
+            <img
+              src={microsoft}
+              alt="Microsoft Logo"
+              className="company-logo"
+            />
+            <img src={netflix} alt="Netflix Logo" className="company-logo" />
+            <img src={sony} alt="Sony Logo" className="company-logo" />
+          </div>
+        </div>
       </div>
       {/* ---------map-end------ */}
+      <div className="bio-container" id="bio-containers">
+        <h1 className="bio-title">The Way I Mentor</h1>
+        <p className="bio-description">
+          I aim to serve as a catalyst, inspiring you to develop both as a
+          designer and as an individual. I value attention to detail and will
+          motivate you to reflect, strategize, and envision
+        </p>
+      </div>
+      <div className="authenticity-containerp">
+        <div className="authenticity-container">
+          <div className="authenticity-content" id="radiu">
+            <li className="authenticity-icon">
+              <FingerprintIcon />
+            </li>
+            <h1 className="authenticity-title">Genuineness</h1>
+            <p className="authenticity-description">
+              I believe in honest feedback because your growth matters to me.
+              Together, we'll break things down and build them back stronger and
+              better
+            </p>
+          </div>
+          <div className="authenticity-content" id="radiu1">
+            <li className="authenticity-icon">
+              <YardOutlinedIcon />
+            </li>
+            <h1 className="authenticity-title">Simplicity</h1>
+            <p className="authenticity-description">
+              I don't claim to be the best in the design field, as I’m aware
+              there’s always more to learn. Design is a constantly evolving goal
+              I pursue tirelessly every day
+            </p>
+          </div>
+          <div className="authenticity-content" id="radiu2">
+            <li className="authenticity-icon">
+              <BalanceSharpIcon />
+            </li>
+            <h1 className="authenticity-title">Justice</h1>
+            <p className="authenticity-description">
+              To me, you’re more than a mentee; you’re a fellow designer and an
+              equal in the industry. Teaching and learning flow both ways in our
+              collaboration
+            </p>
+          </div>
+          <div className="authenticity-content" id="radiu3">
+            <li className="authenticity-icon">
+              <TakeoutDiningIcon />
+            </li>
+            <h1 className="authenticity-title">Openness</h1>
+            <p className="authenticity-description">
+              I may not have all the answers, but I’m eager to guide you to
+              valuable resources and share insights from my own design
+              experiences
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* ------mentoring-style-end----- */}
+      {/* -------Testimonials-start------- */}
+      <div className="slider">
+        <div className="childslider">
+          <h1>Grateful Mentees</h1>
+          <p>Don’t just listen to me—hear it straight from them...</p>
+          <div className="slide">
+            <img
+              src={slides[currentIndex].image}
+              alt={`${slides[currentIndex].name}'s profile`}
+              className="profile-image"
+              style={{
+                width: "70px",
+                height: "70px",
+                borderRadius: "50%",
+                marginBottom: "10px",
+              }}
+            />
+            <p>{slides[currentIndex].text}</p>
+            <div className="authorcontainer">
+              <p className="authorname"> {slides[currentIndex].name}</p>{" "}
+              {slides[currentIndex].title}
+              {slides[currentIndex].company &&
+                ` - ${slides[currentIndex].company}`}
+            </div>
+          </div>
+        </div>
+        <div className="dots">
+          {slides.map((_, index) => (
+            <span
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={index === currentIndex ? "dot active" : "dot"}
+            ></span>
+          ))}
+        </div>
+      </div>
+      {/* -------Testimonials-end------- */}
 
       {/* ----------banner-start--------- */}
       <div className="project-container">

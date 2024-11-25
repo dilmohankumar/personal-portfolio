@@ -11,3 +11,20 @@
     font-size: 0.9rem;
   }
 }
+@media (max-width: 768px) {
+  .authenticity-container {
+    grid-template-columns: 1fr; /* 1 column on smaller screens */
+  }
+  #radiu {
+    border-radius: 1rem 1rem 0 0;
+  }
+  #radiu1 {
+    border-radius: 0 0 0 0;
+  }
+  #radiu2 {
+    border-radius: 0 0 0 0;
+  }
+  #radiu3 {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
