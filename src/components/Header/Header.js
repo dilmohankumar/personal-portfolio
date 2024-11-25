@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import "./responsive.css";
 import Logo from "./../../assests/logo.png";
@@ -6,6 +7,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
 const Header = () => {
+  const navigate = useNavigate();
   const [showMenu, setshowMenu] = useState(true);
   const toggleMenu = () => {
     setshowMenu(!showMenu);
@@ -59,11 +61,11 @@ const Header = () => {
           className={showMenu ? "show-nav-wrapper" : "nav-wrapper"}
         >
           <ul className="header-list">
-            <li className="learningp">
-              <Link to="/partnership">Learning Partnership</Link>
+            <li className="learningp" onClick={() => navigate("/partnership")}>
+              Learning Partnership
             </li>
-            <li className="sendMessage">
-              <Link to="/messform">Send Message</Link>
+            <li className="sendMessage" onClick={() => navigate("/messforrm")}>
+              Send Message
             </li>
             <div className="linee"></div>
           </ul>

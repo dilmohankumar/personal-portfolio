@@ -96,6 +96,7 @@ p {
   font-size: 2rem;
 }
 .skills-container {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   padding-top: -10rem;
   display: flex;
   flex-direction: row;
@@ -111,13 +112,14 @@ p {
 }
 .skill-card {
   min-height: 40rem;
-  padding: 20px;
+  /* padding: 20px; */
   box-sizing: border-box;
 }
 .skill-card-2,
 .skill-card {
   border-right: 1px solid #a6a6a6;
 }
+
 .skills-container img {
   width: 23%;
   height: 66px;
@@ -134,10 +136,10 @@ p {
   height: 92px;
 }
 .skills-container h1 {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 2rem;
 }
 .skill-description {
-  font-weight: 300;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,10 +154,12 @@ p {
   align-items: center;
   text-align: center;
   color: #515050;
+  padding: 1rem;
 }
 .skill-languages {
   padding-top: 2.5rem;
   color: blue;
+  font-weight: 600;
 }
 .skill-languages-list {
   padding-top: 10px;
@@ -163,6 +167,8 @@ p {
 .skill-tools {
   padding-top: 2.5rem;
   color: blue;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 .skill-mentor-stats-list {
   margin-top: 10px;

@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: rgb(97, 2, 240);
 }
 .tweak-message {
   font-size: 2rem;
@@ -31,16 +32,144 @@
 .bio-container p {
   font-size: 1.6rem;
 }
+#bio-containers {
+  background-color: rgb(160, 50, 50);
+}
 #skill-cards,
 #skill-cards-2,
 #skill-cards-3 {
- border-radius: 1rem;
- border: 1px solid rgba(169, 164, 164, 0.641);
+  border-radius: 1rem;
+  border: 1px solid rgba(169, 164, 164, 0.641);
   margin: 10px;
   background-color: white;
-  padding: 6px;
+  padding: 1rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#skill-cards img {
+  width: 43%;
+  height: 92px;
 }
 #skills-containers {
   background: none;
   border: none;
+  box-shadow: none;
+}
+#skill-descriptions {
+  color: brown;
+  letter-spacing: 1px;
+}
+.comman-booklink {
+  background-color: rgb(41, 5, 99);
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 1.5rem;
+  color: aqua;
+  cursor: pointer;
+}
+.mentorship-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  gap: 2rem;
+}
+.mparent {
+  display: flex;
+  padding-top: 8rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.tellme-links-mentorship-link {
+  text-decoration: none;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  border: 1px solid rgb(28, 249, 212);
+  border-radius: 2rem;
+  color: rgb(7, 18, 233);
+  font-weight: 600;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  white-space: nowrap;
+}
+.tellme-links-mentorship-link:hover {
+  background: rgb(28, 249, 212);
+  color: rgb(14, 12, 12);
+}
+.mentorship-rewards {
+  padding-top: 8rem;
+  width: 80%;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.mps {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.mentorship-title {
+  font-size: 31px;
+  font-weight: 600;
+}
+.servicesp {
+  padding: 2rem;
+  padding-top: 8rem;
+}
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsive column layout */
+  gap: 20px;
+}
+.service-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  border-radius: 8px; /* Slightly rounded corners for a professional look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  gap: 10px;
+}
+.service-description {
+  font-size: 18px;
+}
+.service-title {
+  font-size: 26px;
+  font-weight: 600;
+}
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.service-icon {
+  color: dodgerblue;
+}
+.mentorship-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 60%;
+}
+.mentorship-container {
+  width: 100%;
 }
