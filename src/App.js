@@ -1,22 +1,17 @@
 import "./App.css";
-import Header from "./components/Header/Header";
-import Home from "./pages/Home/Home";
-import Footer from "./components/Footer/footer.js";
-import Messform from "./pages/messageform/messform.js";
 import { Route, Routes } from "react-router-dom";
-import Partnership from "./pages/partnership/partnership.js";
-
+import MainLayout from "./layouts/MainLayout";
+import PlainLayout from "./layouts/PlainLayout";
+import Home from "./pages/Home/Home";
+import Messform from "./pages/messageform/MessForm.js";
+import Partnership from "./pages/partnership/partnership";
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/messform" element={<Messform />} />
-        <Route path="/Partnership" element={<Partnership />} />
-      </Routes>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<MainLayout><Home /></MainLayout>} />
+      <Route path="/Partnership" element={<MainLayout><Partnership /></MainLayout>} />
+      <Route path="/messform" element={<PlainLayout><Messform /></PlainLayout>} />
+    </Routes>
   );
 }
 export default App;

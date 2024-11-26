@@ -1,0 +1,92 @@
+body {
+  background-color: #f1f1f1;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 4rem;
+  width: 72%;
+  height: 50rem;
+  background: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); 
+}
+.form-containerpp {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.textarea-field {
+  width: 96%;
+  height: 8rem;
+  border-radius: 5px;
+  border-color: #b3b3b3d1;
+  padding: 10px;
+  outline: none;
+}
+#inputf {
+  padding-right: 10px;
+}
+.input-col {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 3rem;
+  gap: 2rem;
+}
+.input-field {
+  width: 14rem;
+  padding: 10px;
+  height: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: #b3b3b3d1;
+  outline: none;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  color: #000cff;
+  padding-bottom: 1rem;
+}
+.flexs {
+  align-items: flex-start;
+}
+.formw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form-title {
+  width: 80%;
+  font-weight: 500;
+  color: #420355;
+}
+.send-button {
+  padding: 0.5rem 4rem 0.5rem 4rem;
+  margin-bottom: 8rem;
+  border-radius: 2rem;
+  font-size: 2rem;
+  border-color: #420355;
+  color: rgb(41, 5, 99);
+  background: none;
+}
+.send-button:hover {
+  background-color: #420355;
+  color: white;
+}
+#headerp {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}

@@ -64,7 +64,7 @@ const Header = () => {
             <li className="learningp" onClick={() => navigate("/partnership")}>
               Learning Partnership
             </li>
-            <li className="sendMessage" onClick={() => navigate("/messforrm")}>
+            <li className="sendMessage" onClick={() => navigate("/MessForm")}>
               Send Message
             </li>
             <div className="linee"></div>
