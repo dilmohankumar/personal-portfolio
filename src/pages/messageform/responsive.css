@@ -1,0 +1,39 @@
+@media (max-width: 829px) {
+  .input-field {
+    width: 80%;
+  }
+  .send-button {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 740px) {
+  .input-col {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    gap: 2rem;
+  }
+  .form-logo {
+    width: 6rem;
+    height: 6rem;
+  }
+  .form-container {
+    align-items: flex-start;
+    padding: 4rem;
+  }
+  .form-containerpp {
+    width: 44rem;
+  }
+  .bodyy {
+    width: 44rem;
+  }
+  .input-field {
+    width: 305%;
+  }
+  .textarea-field {
+    width: 270%;
+  }
+  .send-button {
+    width: 259%;
+  }
+}
