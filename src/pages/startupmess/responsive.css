@@ -1,0 +1,8 @@
+@media (max-width: 740px) {
+  #inputff {
+    width: 342%;
+  }
+  .form-container {
+    height: 66rem;
+  }
+}

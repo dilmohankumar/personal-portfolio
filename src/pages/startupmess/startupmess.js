@@ -1,11 +1,11 @@
 import React from "react";
-import "./messform.css";
+import "./startupmess.css";
 import "./responsive.css";
 import Developer from "../../assests/developer.png";
 import Logo from "../../assests/logo.png";
 import { Link } from "react-router-dom";
 
-const Messform = () => {
+const startupmess = () => {
   return (
     <div className="bodyy">
       <div className="header-logo" id="headerp">
@@ -19,7 +19,10 @@ const Messform = () => {
       </div>
       {/*  ----form-start----- */}
       <div className="form-containerpp">
-        <div className="form-container" style={{ backgroundColor: '#00ffff17' }}>
+        <div
+          className="form-container"
+          style={{ backgroundColor: "#d1acf614" }}
+        >
           <div className="logo-section">
             <img
               src={Developer}
@@ -29,7 +32,7 @@ const Messform = () => {
             />
             <div className="formw">
               <h1 className="form-title">
-                I appreciate you reaching out. How may I assist you today?
+                Looking to collaborate on a startup? I’m totally up for it.
               </h1>
             </div>
           </div>
@@ -39,6 +42,7 @@ const Messform = () => {
                 <label className="input-label">Name</label>
                 <input
                   className="input-field"
+                  id="inputf"
                   placeholder="Enter Your Name..."
                 />
               </div>{" "}
@@ -51,10 +55,35 @@ const Messform = () => {
                 />
               </div>
             </div>
-            <label className="input-label">Message</label>
+            <div className="input-col">
+              <div className="flexs">
+                <label className="input-label">Project category</label>
+                <select className="input-field" id="inputff">
+                  <option disabled selected>
+                    Select an option...
+                  </option>
+                  <option>Responsive design</option>
+                  <option>Web Design</option>
+                  <option>App Design</option>
+                </select>
+              </div>
+              <div className="flexs" onclick="showOptions()">
+                <label className="input-label">Your focus</label>
+                <select className="input-field" id="inputff">
+                  {" "}
+                  <option disabled selected>
+                    Select an option...
+                  </option>
+                  <option>collaborate</option>
+                  <option>invest</option>
+                  <option>founder</option>
+                </select>
+              </div>
+            </div>
+            <label className="input-label">Details</label>
             <textarea
               className="textarea-field"
-              placeholder="Send Message..."
+              placeholder="Send Details..."
             ></textarea>
           </div>
           <div className="button-section">
@@ -67,4 +96,4 @@ const Messform = () => {
   );
 };
 
-export default Messform;
+export default startupmess;

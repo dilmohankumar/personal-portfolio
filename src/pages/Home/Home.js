@@ -429,7 +429,7 @@ const Home = () => {
           I am always open to exploring opportunities for collaborating in
           product design or potential partnerships.
         </p>
-        <Link to="/" className="collaboration-link">
+        <Link to="startupmess" className="collaboration-link">
           <ChatIcon className="collaboration-icon" />
           Let’s start a conversation
         </Link>
@@ -480,7 +480,7 @@ const Home = () => {
             I’d love to connect! Let me know a time that works, and I’ll bring
             some ideas to the table
           </p>
-          <Link to="/" className="project-link">
+          <Link to="projectdiscuss" className="project-link">
             <SportsHandballIcon />
             Excited to start this!
           </Link>
