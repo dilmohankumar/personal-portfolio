@@ -1,0 +1,7 @@
+
+@media (max-width: 740px) {
+    #input-mentorship, #input-result {
+        width: 266%;
+        height: 3rem;
+    }
+}

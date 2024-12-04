@@ -1,0 +1,11 @@
+#input-project-category ,#input-project-budget ,#input-your-focus {
+  width: 15.3rem;
+  height: 3rem;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: #b3b3b3d1;
+  outline: none;
+}
+.form-container {
+  height: 60rem;
+}

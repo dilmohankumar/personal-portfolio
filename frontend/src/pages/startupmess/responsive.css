@@ -1,0 +1,8 @@
+@media (max-width: 740px) {
+  #input-project-category ,#input-project-budget ,#input-your-focus {
+    width: 342%;
+  }
+  .form-container {
+    height: 66rem;
+  }
+}
