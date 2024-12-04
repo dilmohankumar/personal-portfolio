@@ -17,7 +17,7 @@ function App() {
       <Route path="/startupmess" element={<PlainLayout><Startupmess /></PlainLayout>} />
       <Route path="/Projectdiscuss" element={<PlainLayout><Projectdiscuss /></PlainLayout>} />
       <Route path="/learningintro" element={<PlainLayout><Learningintro /></PlainLayout>} />
-   
+     
     </Routes>
   );
 }
