@@ -1,18 +1,32 @@
-const express = require('express');
-const Razorpay = require("razorpay");
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 const cors = require("cors");
 require("dotenv").config();
 const crypto = require("crypto");
+const Razorpay = require("razorpay"); // Added Razorpay import
+const messageRoutes = require("./model");
+const MentorshipRouter = require("./mentormodel.js");
 
+
+// Create the Express app
 const app = express();
-const PORT = process.env.PORT || 3000; 
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cors({  
-    origin: '*',
-}));
-  
+app.use(cors());
+app.use(bodyParser.json());
+app.use("/api/message", messageRoutes);
+app.use("/api", MentorshipRouter); 
+
+
+
+
+// Connect to MongoDB
+mongoose
+  .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.error("Error connecting to MongoDB:", err));
+
+// Existing Razorpay order handling
 app.post('/order', async (req, res) => {
     try {
         const razorpay = new Razorpay({
@@ -25,8 +39,6 @@ app.post('/order', async (req, res) => {
             return res.status(500).send("Error creating order");
         }
         
-        
-
         res.json(order);
     } catch (err) {
         console.log(err);
@@ -35,21 +47,22 @@ app.post('/order', async (req, res) => {
 });
 
 app.post("/order/validate", async (req, res) => {
-    const{razorpay_order_id,razorpay_payment_id,razorpay_signature}=
-    req.body;
-    const sha=crypto.createHmac("sha256",process.env.RAZORPAY_SECRET);
+    const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
+    const sha = crypto.createHmac("sha256", process.env.RAZORPAY_SECRET);
     sha.update(`${razorpay_order_id}|${razorpay_payment_id}`);
-    const digest =sha.digest("hex");
-    if(digest !==razorpay_signature){
-        return res.status(400).json({msg:"Transaction is not legit!"})
+    const digest = sha.digest("hex");
+    if (digest !== razorpay_signature) {
+        return res.status(400).json({ msg: "Transaction is not legit!" });
     }
     res.json({
-        msg:"success",
-        orderId:razorpay_order_id,
-        paymentId:razorpay_payment_id,
+        msg: "success",
+        orderId: razorpay_order_id,
+        paymentId: razorpay_payment_id,
     });
 });
 
+// Start the server
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

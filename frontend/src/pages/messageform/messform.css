@@ -80,6 +80,8 @@
   border-color: #420355;
   color: rgb(41, 5, 99);
   background: none;
+  position: relative;
+  top: 3rem;
 }
 .send-button:hover {
   background-color: #420355;
@@ -91,3 +93,38 @@
   text-align: center;
   justify-content: center;
 }
+.error-border {
+  box-shadow: 0 0 0 2px red; 
+  border: 1px solid transparent; 
+}
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  position: absolute; 
+  left: 0; 
+  top: 100%; 
+  white-space: nowrap; 
+}
+.error-messagess{
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  position: absolute; 
+ 
+  top: 49rem;
+  white-space: nowrap; 
+}
+.status-message {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: green;
+  position: relative;
+}
+.status-message.error {
+  color: red;
+}
+.flexs {
+  position: relative; 
+}
+

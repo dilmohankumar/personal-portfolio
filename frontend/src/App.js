@@ -8,6 +8,10 @@ import Messform from "./pages/messageform/MessForm.js";
 import Partnership from "./pages/partnership/partnership";
 import Projectdiscuss from "./pages/projectdiscuss/projectdiscuss.js";
 import Startupmess from "./pages/startupmess/startupmess.js";
+import Messages from "./Data/messages.js";
+import Mentorship from "./Data/mentorship.js";
+import Success from "./pages/successpage/success.js";
+
 function App() {
   return (
     <Routes>
@@ -17,6 +21,9 @@ function App() {
       <Route path="/startupmess" element={<PlainLayout><Startupmess /></PlainLayout>} />
       <Route path="/Projectdiscuss" element={<PlainLayout><Projectdiscuss /></PlainLayout>} />
       <Route path="/learningintro" element={<PlainLayout><Learningintro /></PlainLayout>} />
+      <Route path="/Success" element={<PlainLayout><Success /></PlainLayout>} />
+      <Route path="/messages" element={<MainLayout><Messages /></MainLayout>} />
+      <Route path="/Mentorship" element={<MainLayout><Mentorship /></MainLayout>} />
      
     </Routes>
   );
