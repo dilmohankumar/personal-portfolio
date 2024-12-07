@@ -24,7 +24,7 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.textarea-field {
+.textarea-fieldm {
   width: 96%;
   height: 8rem;
   border-radius: 5px;
@@ -94,26 +94,26 @@
   justify-content: center;
 }
 .error-border {
-  box-shadow: 0 0 0 2px red; 
-  border: 1px solid transparent; 
+  box-shadow: 0 0 0 2px red;
+  border: 1px solid transparent;
 }
 .error-message {
   color: red;
   font-size: 0.85rem;
   margin-top: 5px;
-  position: absolute; 
-  left: 0; 
-  top: 100%; 
-  white-space: nowrap; 
+  position: absolute;
+  left: 0;
+  top: 100%;
+  white-space: nowrap;
 }
-.error-messagess{
+.error-messagess {
   color: red;
   font-size: 0.85rem;
   margin-top: 5px;
-  position: absolute; 
- 
+  position: absolute;
+
   top: 49rem;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 .status-message {
   margin-top: 15px;
@@ -125,6 +125,5 @@
   color: red;
 }
 .flexs {
-  position: relative; 
+  position: relative;
 }
-

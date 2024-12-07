@@ -6,17 +6,20 @@ import Logo from "../../assests/logo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
 const Messform = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [errors, setErrors] = useState({ name: "", email: "", message: "" });
   const [, setStatus] = useState("");
-  const navigate = useNavigate(); // For navigation
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    setErrors({ ...errors, [name]: "" }); // Clear specific error on input
+    setErrors({ ...errors, [name]: "" });
   };
 
   const validateForm = () => {
@@ -43,7 +46,7 @@ const Messform = () => {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("http://localhost:5000/api/submit", {
+      const response = await fetch("http://localhost:5000/api/message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -52,8 +55,8 @@ const Messform = () => {
 
       if (response.ok) {
         setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" }); // Clear form
-        navigate("/success"); 
+        setFormData({ name: "", email: "", message: "" });
+        navigate("/success");
       } else {
         setStatus(`Error: ${result.message}`);
       }
@@ -75,7 +78,10 @@ const Messform = () => {
       </div>
       {/* Form Section */}
       <div className="form-containerpp">
-        <div className="form-container" style={{ backgroundColor: "#00ffff17" }}>
+        <div
+          className="form-container"
+          style={{ backgroundColor: "#00ffff17" }}
+        >
           <div className="logo-section">
             <img
               src={Developer}
@@ -93,9 +99,13 @@ const Messform = () => {
             <div className="input-section">
               <div className="input-col">
                 <div className="flexs">
-                  <label className="input-label" htmlFor="name-input">Name</label>
+                  <label className="input-label" htmlFor="name-input">
+                    Name
+                  </label>
                   <input
-                    className={`input-field ${errors.name ? "error-border" : ""}`}
+                    className={`input-field ${
+                      errors.name ? "error-border" : ""
+                    }`}
                     id="name-input"
                     name="name"
                     value={formData.name}
@@ -103,12 +113,18 @@ const Messform = () => {
                     autoComplete="name"
                     onChange={handleChange}
                   />
-                  {errors.name && <span className="error-message">{errors.name}</span>}
+                  {errors.name && (
+                    <span className="error-message">{errors.name}</span>
+                  )}
                 </div>
                 <div className="flexs">
-                  <label className="input-label" htmlFor="email-input">Email</label>
+                  <label className="input-label" htmlFor="email-input">
+                    Email
+                  </label>
                   <input
-                    className={`input-field ${errors.email ? "error-border" : ""}`}
+                    className={`input-field ${
+                      errors.email ? "error-border" : ""
+                    }`}
                     id="email-input"
                     name="email"
                     value={formData.email}
@@ -116,25 +132,37 @@ const Messform = () => {
                     autoComplete="email"
                     onChange={handleChange}
                   />
-                  {errors.email && <span className="error-message">{errors.email}</span>}
+                  {errors.email && (
+                    <span className="error-message">{errors.email}</span>
+                  )}
                 </div>
               </div>
-              <label className="input-label" htmlFor="message-input">Message</label>
-              
+              <label className="input-label" htmlFor="message-input">
+                Message
+              </label>
+
               <textarea
-                className={`textarea-field ${errors.message ? "error-border" : ""}`}
+                className={`textarea-fieldm ${
+                  errors.message ? "error-border" : ""
+                }`}
                 id="message-input"
                 name="message"
                 value={formData.message}
                 placeholder="Send Message..."
                 autoComplete="off"
                 onChange={handleChange}
-              > </textarea>
-             {errors.message && <span className="error-messagess">{errors.message}</span>}
+              >
+                {" "}
+              </textarea>
+              {errors.message && (
+                <span className="error-messagess">{errors.message}</span>
+              )}
             </div>
             <div className="button-section">
-              <button type="submit" className="send-button" >Send</button>
-            </div>            
+              <button type="submit" className="send-button">
+                Send
+              </button>
+            </div>
           </form>
         </div>
       </div>

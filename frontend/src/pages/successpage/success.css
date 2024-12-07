@@ -1,80 +1,74 @@
-/* ThankYouPage.css */
-
 .successbody {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #e7ed6d, #5721b0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .thank-you-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #e7ed6d, #5721b0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  }
-  .thank-you-container :hover{
-    box-shadow: 0 4px 6px rgb(0, 0, 0);
-    /* height: fit-content; */
-  }
-  .thank-you-card h1:hover, 
+.thank-you-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.thank-you-container :hover {
+  box-shadow: 0 4px 6px rgb(0, 0, 0);
+}
+.thank-you-card h1:hover,
 .thank-you-card p:hover {
   box-shadow: none;
-  transition: box-shadow 0.3s ease; 
+  transition: box-shadow 0.3s ease;
 }
-  
-  .thank-you-card {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 40px 20px;
-    max-width: 400px;
-    width: 100%;
-    animation: fadeIn 1.5s ease-out;
+
+.thank-you-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.thank-you-card h1 {
+  color: #2193b0;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.thank-you-card p {
+  color: #555555;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.thank-you-card button {
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.thank-you-card button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .thank-you-card h1 {
-    color: #2193b0;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .thank-you-card p {
-    color: #555555;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-  
-  .thank-you-card button {
-    background: linear-gradient(135deg, #6dd5ed, #2193b0);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
-  }
-  
-  .thank-you-card button:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(135deg, #2193b0, #6dd5ed);
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+}

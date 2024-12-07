@@ -13,6 +13,4 @@ const messageSchema = new mongoose.Schema({
     default: () => new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
   },
 });
-// Apply TTL index to `expiresAt`
-messageSchema.index({ expiresAt: 1 }, { expireAfterSeconds: 0 });
-module.exports = mongoose.model("Message", messageSchema, "messages");
+module.exports = mongoose.model("messages", messageSchema);

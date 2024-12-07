@@ -9,11 +9,12 @@ function CollectionPage() {
   const handleShowMore = () => {
     setVisibleItems((prev) => prev + 2);
   };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/message/messages"
+          "http://localhost:5000/api/startup/startupmessages"
         );
         const data = await response.json();
         const sortedData = data.reverse();
@@ -41,9 +42,13 @@ function CollectionPage() {
             <li key={item._id} className="message-item">
               <div className="message-header">
                 <strong className="message-name">{item.name}</strong>
-                <p className="message-email">({item.email})</p>
+                <p className="message-email">{item.email}</p>
               </div>
-              <p className="message-content">{item.message}</p>
+              <p className="message-content">{item.projectCategory}</p>
+              <div className="message-details">
+                <p className="message-journey">{item.focus}</p>
+                <p className="message-mentorship">{item.details}</p>
+              </div>
               <hr className="message-divider" />
             </li>
           ))}

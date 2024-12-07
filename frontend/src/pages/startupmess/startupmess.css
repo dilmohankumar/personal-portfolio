@@ -1,4 +1,6 @@
-#input-project-category ,#input-project-budget ,#input-your-focus {
+#input-project-category,
+#input-project-budget,
+#input-your-focus {
   width: 15.3rem;
   height: 3rem;
   border-radius: 5px;
@@ -8,4 +10,12 @@
 }
 .form-container {
   height: 60rem;
+}
+.textarea-fields {
+  width: 266%;
+  height: 8rem;
+  border-radius: 5px;
+  border-color: #b3b3b3d1;
+  padding: 10px;
+  outline: none;
 }

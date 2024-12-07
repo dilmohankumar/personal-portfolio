@@ -13,7 +13,7 @@
 }
 @media (max-width: 768px) {
   .authenticity-container {
-    grid-template-columns: 1fr; /* 1 column on smaller screens */
+    grid-template-columns: 1fr;
   }
   #radiu {
     border-radius: 1rem 1rem 0 0;

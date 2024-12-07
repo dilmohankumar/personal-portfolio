@@ -1,6 +1,4 @@
 const mongoose = require("mongoose");
-
-// Mentorship Schema
 const mentorshipSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: {
@@ -18,12 +16,9 @@ const mentorshipSchema = new mongoose.Schema({
     default: () => new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
   },
 });
-
-// Mentorship Schema Model
 const Mentorship = mongoose.model(
   "Mentorship",
   mentorshipSchema,
   "mentorships"
 );
-
 module.exports = Mentorship;

@@ -1,0 +1,11 @@
+.textarea-fieldp {
+  width: 96%;
+  height: 8rem;
+  border-radius: 5px;
+  border-color: #b3b3b3d1;
+  padding: 10px;
+  outline: none;
+}
+#mess {
+  position: relative;
+}
