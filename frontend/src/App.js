@@ -13,6 +13,7 @@ import Mentorship from "./Data/mentorship.js";
 import Startup from "./Data/startup.js";
 import Projectmessage from "./Data/projectmessage.js";
 import Success from "./pages/successpage/success.js";
+import Dashboard from "./pages/dashboard/dashboard.js";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Route path="/Mentorship" element={<MainLayout><Mentorship /></MainLayout>} />
       <Route path="/Startup" element={<MainLayout><Startup /></MainLayout>} />
       <Route path="/Projectmessage" element={<MainLayout><Projectmessage /></MainLayout>} />
+      <Route path="/Dashboard" element={<PlainLayout><Dashboard /></PlainLayout>} />
   
     </Routes>
   );

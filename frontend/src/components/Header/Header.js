@@ -67,6 +67,7 @@ const Header = () => {
             <li className="sendMessage" onClick={() => navigate("/MessForm")}>
               Send Message
             </li>
+            <li  className="dashboard" onClick={() => navigate("/Dashboard")}>Dashboard</li>
             <div className="linee"></div>
           </ul>
         </div>

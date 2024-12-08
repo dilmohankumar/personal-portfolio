@@ -41,8 +41,15 @@
   cursor: pointer;
   z-index: 5;
 }
-.nav-wrapper{
+.nav-wrapper {
   position: fixed;
 }
-
-
+.dashboard {
+  border-radius: 2rem;
+  border: 2px solid rgb(0, 157, 255);
+  padding: 20px;
+  height: 1px;
+}
+.dashboard:hover {
+  background-color: rgb(0, 157, 255);
+}

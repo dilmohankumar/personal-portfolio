@@ -4,7 +4,7 @@ import "./messages.css";
 function CollectionPage() {
   const [collection, setCollection] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [visibleItems, setVisibleItems] = useState(2);
+  const [visibleItems, setVisibleItems] = useState(5);
 
   const handleShowMore = () => {
     setVisibleItems((prev) => prev + 2);
@@ -33,6 +33,7 @@ function CollectionPage() {
     return <p className="loading-text">Loading...</p>;
   }
   return (
+    <div className="bodym">
     <div className="collection-page">
       <h1 className="page-title">Messages</h1>
       {collection.length > 0 ? (
@@ -56,6 +57,7 @@ function CollectionPage() {
           Show More
         </button>
       )}
+    </div>
     </div>
   );
 }

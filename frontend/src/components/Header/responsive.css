@@ -35,10 +35,16 @@
     border-bottom: 3px solid transparent;
   }
   .sendMessage a:hover {
-    background-color:rgb(183 181 186 / 32%);
+    background-color: rgb(183 181 186 / 32%);
     padding: 5px;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+  .dashboard {
+    border: none;
+  }
+  .dashboard:hover {
+    background: none;
   }
   .header-list li {
     position: relative;
