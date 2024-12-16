@@ -6,8 +6,10 @@ import Logo from "./../../assests/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 
-const Header = ({ user }) => {
+const Header = () => {
+  const [userRole, setUserRole] = useState(null);
   const navigate = useNavigate();
   const [showMenu, setshowMenu] = useState(true);
   const toggleMenu = () => {
@@ -42,6 +44,18 @@ const Header = ({ user }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const token = localStorage.getItem("Token");
+    if (token) {
+      try {
+        const decodedToken = jwtDecode(token);
+        setUserRole(decodedToken.role);
+      } catch (error) {
+        console.error("Error decoding token:", error);
+      }
+    }
+  }, []);
+
   return (
     <header>
       <div className="header-container">
@@ -70,11 +84,13 @@ const Header = ({ user }) => {
             <li className="sendMessage" onClick={() => navigate("/MessForm")}>
               Send Message
             </li>
-            {/* {user?.role === "admin" && ( */}
-            <li className="dashboard" onClick={() => navigate("/Dashboard")}>
-              Dashboard
-            </li>
-            {/* )} */}
+
+            {userRole === "admin" && (
+              <li className="dashboard" onClick={() => navigate("/Dashboard")}>
+                Dashboard
+              </li>
+            )}
+
             <div className="linee"></div>
           </ul>
         </div>

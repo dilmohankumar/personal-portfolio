@@ -1,22 +1,27 @@
 import { React } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Mentorship from "./Data/mentorship.js";
+import Messages from "./Data/messages.js";
+import Projectmessage from "./Data/projectmessage.js";
+import Startup from "./Data/startup.js";
 import MainLayout from "./layouts/MainLayout";
 import PlainLayout from "./layouts/PlainLayout";
+import Dashboard from "./pages/dashboard/dashboard.js";
 import Home from "./pages/Home/Home";
 import Learningintro from "./pages/learning-intro/learningintro.js";
+import Login from "./pages/Loginpage/login.js";
 import Messform from "./pages/messageform/MessForm.js";
 import Partnership from "./pages/partnership/partnership";
 import Projectdiscuss from "./pages/projectdiscuss/projectdiscuss.js";
-import Startupmess from "./pages/startupmess/startupmess.js";
-import Messages from "./Data/messages.js";
-import Mentorship from "./Data/mentorship.js";
-import Startup from "./Data/startup.js";
-import Projectmessage from "./Data/projectmessage.js";
-import Success from "./pages/successpage/success.js";
-import Dashboard from "./pages/dashboard/dashboard.js";
-import Login from "./pages/Loginpage/login.js";
 import Signup from "./pages/signup/signup.js";
+import Startupmess from "./pages/startupmess/startupmess.js";
+import Success from "./pages/successpage/success.js";
+
+const PrivateRoute = ({ children }) => {
+  const token = localStorage.getItem("Token");
+  return token ? children : <Navigate to="/login" />;
+};
 
 function App() {
   return (
@@ -110,12 +115,15 @@ function App() {
             </MainLayout>
           }
         />
+        te
         <Route
           path="/Dashboard"
           element={
-            <PlainLayout>
-              <Dashboard />
-            </PlainLayout>
+            <PrivateRoute>
+              <PlainLayout>
+                <Dashboard />
+              </PlainLayout>
+            </PrivateRoute>
           }
         />
         <Route

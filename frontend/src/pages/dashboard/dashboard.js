@@ -34,7 +34,7 @@ function CollectionPage() {
   }
   return (
     <div className="dbody">
-      <div class="button-containerd">
+      <div className="button-containerd">
         <Link to="/">
           <button className="styled-buttond">Home</button>
         </Link>
@@ -42,13 +42,13 @@ function CollectionPage() {
           <button className="styled-buttond">Message</button>
         </Link>
         <Link to="/mentorship">
-          <button class="styled-buttond">Mentorships</button>
+          <button className="styled-buttond">Mentorships</button>
         </Link>
         <Link to="/projectmessage">
-          <button class="styled-buttond">Project</button>
+          <button className="styled-buttond">Project</button>
         </Link>
         <Link to="/startup">
-          <button class="styled-buttond">Startup</button>
+          <button className="styled-buttond">Startup</button>
         </Link>
       </div>
 
@@ -72,27 +72,24 @@ function CollectionPage() {
             <p>No messages available.</p>
           )}
         </section>
-
         {/* Mentorships Section */}
         <section className="collection-sectiond">
           <h2>Mentorships</h2>
           {mentorships && mentorships.length > 0 ? (
             <ul className="collection-listd">
-              {mentorships.map((mentorships) => (
-                <li key={messages._id} className="message-itemd">
+              {mentorships.map((mentorship) => (
+                <li key={mentorship._id} className="message-itemd">
                   <div className="message-headerd">
-                    <strong className="message-named">
-                      {mentorships.name}
-                    </strong>
-                    <p className="message-emaild">{mentorships.email}</p>
+                    <strong className="message-named">{mentorship.name}</strong>
+                    <p className="message-emaild">{mentorship.email}</p>
                   </div>
-                  <p className="message-contentd">{mentorships.message}</p>
+                  <p className="message-contentd">{mentorship.message}</p>
                   <div className="message-detailsd">
-                    <p className="message-journeyd">{mentorships.journey}</p>
+                    <p className="message-journeyd">{mentorship.journey}</p>
                     <p className="message-mentorshipd">
-                      {mentorships.mentorship}
+                      {mentorship.mentorship}
                     </p>
-                    <p className="message-resultd">{mentorships.result}</p>
+                    <p className="message-resultd">{mentorship.result}</p>
                   </div>
                   <hr className="message-dividerd" />
                 </li>
@@ -102,29 +99,28 @@ function CollectionPage() {
             <p>No mentorships available.</p>
           )}
         </section>
-
         {/* Project Discusses Section */}
         <section className="collection-sectiond">
           <h2>Project Discusses</h2>
           {projectRequests && projectRequests.length > 0 ? (
             <ul className="collection-listd">
-              {projectRequests.map((projectRequests) => (
-                <li key={projectRequests._id} className="message-itemd">
+              {projectRequests.map((projectRequest) => (
+                <li key={projectRequest._id} className="message-itemd">
                   <div className="message-headerd">
                     <strong className="message-named">
-                      {projectRequests.name}
+                      {projectRequest.name}
                     </strong>
-                    <p className="message-emaild">{projectRequests.email}</p>
+                    <p className="message-emaild">{projectRequest.email}</p>
                   </div>
                   <p className="message-contentd">
-                    {projectRequests.projectCategory}
+                    {projectRequest.projectCategory}
                   </p>
                   <div className="message-detailsd">
                     <p className="message-journeyd">
-                      {projectRequests.projectBudget}
+                      {projectRequest.projectBudget}
                     </p>
                     <p className="message-mentorshipd">
-                      {projectRequests.details}
+                      {projectRequest.details}
                     </p>
                   </div>
                   <hr className="message-dividerd" />
@@ -135,27 +131,26 @@ function CollectionPage() {
             <p>No project discussions available.</p>
           )}
         </section>
-
         {/* Startup Messages Section */}
         <section className="collection-sectiond">
           <h2>Startup Messages</h2>
           {startupRequests && startupRequests.length > 0 ? (
             <ul className="collection-listd">
-              {startupRequests.map((startupRequests) => (
-                <li key={startupRequests._id} className="message-itemd">
+              {startupRequests.map((startupRequest) => (
+                <li key={startupRequest._id} className="message-itemd">
                   <div className="message-headerd">
                     <strong className="message-named">
-                      {startupRequests.name}
+                      {startupRequest.name}
                     </strong>
-                    <p className="message-emaild">{startupRequests.email}</p>
+                    <p className="message-emaild">{startupRequest.email}</p>
                   </div>
                   <p className="message-contentd">
-                    {startupRequests.projectCategory}
+                    {startupRequest.projectCategory}
                   </p>
                   <div className="message-detailsd">
-                    <p className="message-journeyd">{startupRequests.focus}</p>
+                    <p className="message-journeyd">{startupRequest.focus}</p>
                     <p className="message-mentorshipd">
-                      {startupRequests.details}
+                      {startupRequest.details}
                     </p>
                   </div>
                   <hr className="message-dividerd" />
@@ -170,5 +165,4 @@ function CollectionPage() {
     </div>
   );
 }
-
 export default CollectionPage;
