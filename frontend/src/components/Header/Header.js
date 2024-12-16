@@ -6,14 +6,17 @@ import Logo from "./../../assests/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
-const Header = () => {
+
+const Header = ({ user }) => {
   const navigate = useNavigate();
   const [showMenu, setshowMenu] = useState(true);
   const toggleMenu = () => {
     setshowMenu(!showMenu);
     document.body.style.overflow = showMenu ? "hidden" : "auto";
   };
+
   const menuRef = useRef(null);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 700 && !showMenu) {
@@ -67,7 +70,11 @@ const Header = () => {
             <li className="sendMessage" onClick={() => navigate("/MessForm")}>
               Send Message
             </li>
-            <li  className="dashboard" onClick={() => navigate("/Dashboard")}>Dashboard</li>
+            {/* {user?.role === "admin" && ( */}
+            <li className="dashboard" onClick={() => navigate("/Dashboard")}>
+              Dashboard
+            </li>
+            {/* )} */}
             <div className="linee"></div>
           </ul>
         </div>

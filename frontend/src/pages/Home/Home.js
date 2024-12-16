@@ -18,7 +18,17 @@ import sn from "../../assests/sn.png";
 import user from "../../assests/user.png";
 import "./Home.css";
 import "./responsive.css";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (event) => {
+    const token = localStorage.getItem("Token");
+    if (!token) {
+      event.preventDefault();
+      navigate("/login");
+    }
+  };
   const slides = [
     {
       text: "Working with Dilmohan was a fantastic experience, and we’re eager to collaborate with him again. He’s a designer you can fully trust from start to finish.",
@@ -43,6 +53,7 @@ const Home = () => {
     },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const goToNext = () => {
     setCurrentIndex((prevIndex) => {
       return prevIndex === slides.length - 1 ? 0 : prevIndex + 1;
@@ -62,14 +73,15 @@ const Home = () => {
         </p>
       </div>
       <div className="image-container-p">
-      <div className="image-container">
-        <img src={user} alt="user-image" className="user-image" />
-        <img
-          src={Developer}
-          alt="developer-image"
-          className="developer-image"
-        />
-      </div></div>
+        <div className="image-container">
+          <img src={user} alt="user-image" className="user-image" />
+          <img
+            src={Developer}
+            alt="developer-image"
+            className="developer-image"
+          />
+        </div>
+      </div>
       {/* -----bio start----- */}
       <div className="bio-container">
         <h1 className="bio-title">Hey! I'm Dilmohan Let's have some fun.</h1>
@@ -317,7 +329,11 @@ const Home = () => {
           <p className="startup-card-description">
             digital marketing website for digital services
           </p>
-          <a href="https://socialnetworker.in/" className="startup-card-link-1">
+          <a
+            href="https://socialnetworker.in/"
+            onClick={handleClick}
+            className="startup-card-link-1"
+          >
             <span>
               <OpenInNewIcon className="icon-logo" />
               socialnetworker.in
@@ -329,7 +345,7 @@ const Home = () => {
           <p className="startup-card-description">
             shoolay best shoes eccomerce site...
           </p>
-          <a href="/" className="startup-card-link-2">
+          <a href="/" onClick={handleClick} className="startup-card-link-2">
             <span>
               <OpenInNewIcon className="icon-logo" />
               shoolay.com
@@ -341,7 +357,7 @@ const Home = () => {
           <p className="startup-card-description">
             PayLedger Make easy to track record of rent
           </p>
-          <a href="/" className="startup-card-link-3">
+          <a href="/" onClick={handleClick} className="startup-card-link-3">
             <span>
               <OpenInNewIcon className="icon-logo" />
               PayLedger
@@ -353,7 +369,7 @@ const Home = () => {
           <p className="startup-card-description">
             projects are on hold for some time...
           </p>
-          <a href="/" className="startup-card-link-4">
+          <a href="/" onClick={handleClick} className="startup-card-link-4">
             <span>
               <PauseCircleOutlineIcon className="icon-logo" />
               On Hold...
@@ -365,7 +381,7 @@ const Home = () => {
           <p className="startup-card-description">
             projects are on hold for some time...
           </p>
-          <a href="/" className="startup-card-link-5">
+          <a href="/" onClick={handleClick} className="startup-card-link-5">
             <span>
               <PauseCircleOutlineIcon className="icon-logo" />
               On Hold...
@@ -377,7 +393,7 @@ const Home = () => {
           <p className="startup-card-description">
             projects are on hold for some time...
           </p>
-          <a href="/" className="startup-card-link-6">
+          <a href="/" onClick={handleClick} className="startup-card-link-6">
             <span>
               <PauseCircleOutlineIcon className="icon-logo" />
               On Hold...
@@ -389,7 +405,7 @@ const Home = () => {
           <p className="startup-card-description">
             New websites is comming soon in 2025...
           </p>
-          <a href="/" className="startup-card-link-7">
+          <a href="/" onClick={handleClick} className="startup-card-link-7">
             <span>
               <HandshakeIcon className="icon-logo" />
               coming soon...
@@ -401,7 +417,7 @@ const Home = () => {
           <p className="startup-card-description">
             New websites is comming soon in 2025...
           </p>
-          <a href="/" className="startup-card-link-8">
+          <a href="/" onClick={handleClick} className="startup-card-link-8">
             <span>
               <HandshakeIcon className="icon-logo" />
               coming soon...
@@ -413,7 +429,7 @@ const Home = () => {
           <p className="startup-card-description">
             New websites is comming soon in 2025...
           </p>
-          <a href="/" className="startup-card-link-9">
+          <a href="/" onClick={handleClick} className="startup-card-link-9">
             <span>
               <HandshakeIcon className="icon-logo" />
               coming soon...
@@ -421,6 +437,7 @@ const Home = () => {
           </a>
         </div>
       </div>
+
       {/* --------Startup-cards-end-------- */}
       {/* --------collab-start------- */}
       <div className="collaboration-section">
@@ -487,7 +504,6 @@ const Home = () => {
         </div>
       </div>
       {/* ------start-project-banner-end----- */}
-     
     </div>
   );
 };

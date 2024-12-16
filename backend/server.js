@@ -2,7 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-require("dotenv").config();
+const router = express.Router();
+
 const crypto = require("crypto");
 const Razorpay = require("razorpay");
 const messageRoutes = require("./models/model.js");
@@ -10,16 +11,25 @@ const MentorshipRouter = require("./models/mentormodel.js");
 const startupRouter = require("./models/startupmodel.js");
 const projectRouter = require("./models/projectmodel.js");
 const collectionsRoute = require("./models/allcollectionmodel.js");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const dotenv = require("dotenv");
+const authRoutes = require("./models/Auth.js");
+const loginRoute = require("./models/Authlogin");
+
+dotenv.config();
 
 const app = express();
-
+app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/api/message", messageRoutes);
 app.use("/api", MentorshipRouter);
 app.use("/api/startup", startupRouter);
 app.use("/api/project", projectRouter);
-app.use('/', collectionsRoute);
+app.use("/", collectionsRoute);
+app.use("/api/signup", authRoutes);
+app.use("/api", loginRoute);
 
 mongoose
   .connect(process.env.MONGODB_URI, {
@@ -46,9 +56,6 @@ app.post("/order", async (req, res) => {
     res.status(500).send("Error processing request");
   }
 });
-
-
-
 
 app.post("/order/validate", async (req, res) => {
   const { razorpay_order_id, razorpay_payment_id, razorpay_signature } =

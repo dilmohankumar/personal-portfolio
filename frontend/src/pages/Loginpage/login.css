@@ -1,0 +1,117 @@
+/* Wrapper for the login page */
+.login-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.login-page {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-input-container {
+  margin-bottom: 20px;
+}
+
+.login-input-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.login-input-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-input-container input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.login-input-error {
+  border-color: #f44336;
+}
+
+.login-error-text {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #388e3c;
+}
+
+/* Login links section */
+.login-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-links a {
+  color: #4caf50;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0 5px;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+/* Password container */
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  padding-right: 40px; /* Space for the button */
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #4caf50;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.password-toggle-btn:hover {
+  color: #388e3c;
+}
