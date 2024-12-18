@@ -53,3 +53,45 @@
 .dashboard:hover {
   background-color: rgb(0, 157, 255);
 }
+.loginn {
+  color: rgb(0, 0, 0);
+  border: 1px solid blue;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Itim", sans-serif;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.loginn:hover {
+  background-color: rgba(111, 189, 231, 0.687);
+  transform: translateY(-2px);
+}
+
+.loginn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.logoutt {
+  color: rgb(0, 0, 0);
+  border: 1px solid blue;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Itim", sans-serif;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logoutt:hover {
+  background-color: #50a0f0;
+  transform: translateY(-2px);
+}
+
+.logoutt:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

@@ -44,6 +44,7 @@
   background-color: white;
   padding: 1rem;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  max-width: 268px;
 }
 
 #skill-cards img {

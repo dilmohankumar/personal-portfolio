@@ -19,12 +19,12 @@ const Footer = () => {
       </p>
       <div className="footer-social">
         <a
-          href="https://www.facebook.com/profile.php?id=61557068194927"
-          aria-label="Facebook"
+          href="https://www.instagram.com/onestcoder?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          aria-label="Instagram"
           className="social-link"
         >
-          <i className="fab fa-facebook">
-            <FacebookIcon />
+          <i className="fab fa-instagram">
+            <InstagramIcon />
           </i>
         </a>
         <a
@@ -37,14 +37,15 @@ const Footer = () => {
           </i>
         </a>
         <a
-          href="https://www.instagram.com/onestcoder?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-          aria-label="Instagram"
+          href="https://www.facebook.com/profile.php?id=61557068194927"
+          aria-label="Facebook"
           className="social-link"
         >
-          <i className="fab fa-instagram">
-            <InstagramIcon />
+          <i className="fab fa-facebook">
+            <FacebookIcon />
           </i>
         </a>
+
         <a
           href="https://www.linkedin.com/in/dilmohan-kumar-b230b921b/"
           aria-label="LinkedIn"

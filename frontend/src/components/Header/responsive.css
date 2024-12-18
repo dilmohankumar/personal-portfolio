@@ -14,13 +14,14 @@
     position: fixed;
     right: 7rem;
     top: 2rem;
-    width: 26%;
-    height: 32%;
+    width: 30%;
+    height: 40%;
     text-align: center;
     align-items: center;
-    padding: 0;
+    padding: 1rem;
     border-radius: 7px;
     gap: 2rem;
+    margin-top: 1rem;
   }
   .learningp a {
     padding: 5px 1rem;

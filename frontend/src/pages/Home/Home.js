@@ -72,25 +72,27 @@ const Home = () => {
           work.
         </p>
       </div>
-      <div className="image-container-p">
-        <div className="image-container">
-          <img src={user} alt="user-image" className="user-image" />
-          <img
-            src={Developer}
-            alt="developer-image"
-            className="developer-image"
-          />
+      <div className="spacee">
+        <div className="image-container-p">
+          <div className="image-container">
+            <img src={user} alt="user-image" className="user-image" />
+            <img
+              src={Developer}
+              alt="developer-image"
+              className="developer-image"
+            />
+          </div>
         </div>
-      </div>
-      {/* -----bio start----- */}
-      <div className="bio-container">
-        <h1 className="bio-title">Hey! I'm Dilmohan Let's have some fun.</h1>
-        <p className="bio-description">
-          MERN developer on a mission to create engaging web applications that
-          wow users. With a strong grip on MongoDB, Express, React, and Node.js,
-          I thrive on turning ideas into interactive realities. I’m all about
-          innovation, collaboration, and having a blast while coding
-        </p>
+        {/* -----bio start----- */}
+        <div className="bio-container">
+          <h1 className="bio-title">Hey! I'm Dilmohan Let's have some fun.</h1>
+          <p className="bio-description">
+            MERN developer on a mission to create engaging web applications that
+            wow users. With a strong grip on MongoDB, Express, React, and
+            Node.js, I thrive on turning ideas into interactive realities. I’m
+            all about innovation, collaboration, and having a blast while coding
+          </p>
+        </div>
       </div>
       {/* -----bio end------ */}
       {/* -------skills-start----- */}
@@ -139,19 +141,19 @@ const Home = () => {
           <img src={cd} alt="" className="skill-image" />
           <h1 className="skill-title">Dilmohan</h1>
           <p className="skill-description">
-            Dilmohan kumar dilmohan kumar dilmohan kumar dilmohan kumar dilmohan
-            kumar
+            A passionate individual with a love for creativity and storytelling.
+            me enjoys exploring new ideas and sharing experiences.
           </p>
-          <p className="skill-languages">kumar dilmohan</p>
-          <p className="skill-languages-list">dilmohankumarfdf</p>
-          <p className="skill-tools">Deffv dfsd</p>
+          <p className="skill-languages">Languages spoken: Hindi, English</p>
+          <p className="skill-languages-list">Interests: Writing, Art, Music</p>
+          <p className="skill-tools">Tools for creativity</p>
           <ul className="skill-mentor-stats-list">
-            <li>VS dsffCode</li>
-            <li>Nedsfftlify</li>
-            <li>verdsfcel</li>
-            <li>Githfdub</li>
-            <li>matfdsferial-ui</li>
-            <li>versfsdion control</li>
+            <li>Journaling</li>
+            <li>Sketching</li>
+            <li>Digital Art</li>
+            <li>Photography</li>
+            <li>Creative Writing</li>
+            <li>Collaboration Platforms</li>
           </ul>
         </div>
       </div>

@@ -15,7 +15,7 @@
   }
 }
 @media (max-width: 640px) {
- .user-image {
+  .user-image {
     width: 15%;
     height: auto;
   }
@@ -26,53 +26,29 @@
     height: auto;
   }
 }
-@media (max-width: 625px) {
-  .bio-container {
-  margin-top: -22%;
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recent-work-container {
+    padding: 4rem 2rem;
   }
-}
-@media (max-width: 990px) {
-  .bio-container h1 {
+
+  .recent-work-title {
     font-size: 2.5rem;
   }
-  .bio-container p {
-    font-size: 2rem;
+
+  .recent-work-description {
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 760px) {
-  .bio-container h1 {
+@media (max-width: 480px) {
+  .recent-work-title {
     font-size: 2rem;
   }
-  .bio-container p {
-    font-size: 1.4rem;
-  }
-}
-@media (max-width: 456px) {
-  .bio-container p {
-    font-size: 1.4rem;
-  }
-  .bio-container h1 {
-    font-size: 1.9rem;
-  }
-}
-@media (max-width: 830px) {
-  .skills-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .skill-card-2,
-  .skill-card {
-    border-bottom: 1px solid #a6a6a6;
-  }
-}
-@media (max-width: 936px) {
-  .recent-work-container {
-    font-size: 15px;
-  }
-  .recent-work-container p {
-    font-weight: 100;
-    font-size: 15px;
+
+  .recent-work-description {
+    font-size: 0.95rem;
   }
 }
 @media (max-width: 979px) {
@@ -238,5 +214,81 @@
 @media (max-width: 340px) {
   .footer-social {
     width: 20rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skills-container {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .skill-card,
+  .skill-card-2,
+  .skill-card-3 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-title {
+    font-size: 1.5rem;
+  }
+
+  .skill-description {
+    font-size: 0.95rem;
+  }
+
+  .skill-languages,
+  .skill-tools {
+    font-size: 1rem;
+  }
+
+  .skill-languages-list,
+  .skill-mentor-stats-list {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .bio-title {
+    font-size: 2.4rem;
+  }
+
+  .bio-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bio-container {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .bio-title {
+    font-size: 2rem;
+  }
+
+  .bio-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bio-title {
+    font-size: 1.8rem;
+  }
+
+  .bio-description {
+    font-size: 0.95rem;
   }
 }

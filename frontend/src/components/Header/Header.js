@@ -10,8 +10,10 @@ import { jwtDecode } from "jwt-decode";
 
 const Header = () => {
   const [userRole, setUserRole] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
   const [showMenu, setshowMenu] = useState(true);
+
   const toggleMenu = () => {
     setshowMenu(!showMenu);
     document.body.style.overflow = showMenu ? "hidden" : "auto";
@@ -22,7 +24,7 @@ const Header = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 700 && !showMenu) {
-        setshowMenu(true); // Close the menu when resizing to a large screen
+        setshowMenu(true);
       }
     };
     window.addEventListener("resize", handleResize);
@@ -35,7 +37,7 @@ const Header = () => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setshowMenu(true);
-        document.body.style.overflow = "auto"; // Enable scrolling
+        document.body.style.overflow = "auto";
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -50,11 +52,22 @@ const Header = () => {
       try {
         const decodedToken = jwtDecode(token);
         setUserRole(decodedToken.role);
+        setIsLoggedIn(true);
       } catch (error) {
         console.error("Error decoding token:", error);
+        setIsLoggedIn(false);
       }
+    } else {
+      setIsLoggedIn(false);
     }
   }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("Token");
+    setIsLoggedIn(false);
+    setUserRole(null);
+    navigate("/login");
+  };
 
   return (
     <header>
@@ -88,6 +101,15 @@ const Header = () => {
             {userRole === "admin" && (
               <li className="dashboard" onClick={() => navigate("/Dashboard")}>
                 Dashboard
+              </li>
+            )}
+            {isLoggedIn ? (
+              <li className="logoutt" onClick={handleLogout}>
+                Logout
+              </li>
+            ) : (
+              <li className="loginn" onClick={() => navigate("/login")}>
+                Login
               </li>
             )}
 
