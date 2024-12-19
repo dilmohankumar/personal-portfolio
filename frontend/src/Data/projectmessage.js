@@ -14,7 +14,7 @@ function CollectionPage() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/project/projectdiscuss"
+          "https://golden-cocada-649fc2.netlify.app/api/project/projectdiscuss"
         );
         const data = await response.json();
         const sortedData = data.reverse();

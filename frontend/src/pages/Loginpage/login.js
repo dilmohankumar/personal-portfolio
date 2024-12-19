@@ -25,7 +25,7 @@ const LoginPage = () => {
     if (validate()) {
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/login",
+          "https://golden-cocada-649fc2.netlify.app/api/login",
           formData
         );
         const { token } = response.data;

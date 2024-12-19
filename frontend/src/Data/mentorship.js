@@ -12,7 +12,7 @@ function CollectionPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/mentorships");
+        const response = await fetch("https://golden-cocada-649fc2.netlify.app/api/mentorships");
         const data = await response.json();
         const sortedData = data.reverse();
         setCollection(sortedData);

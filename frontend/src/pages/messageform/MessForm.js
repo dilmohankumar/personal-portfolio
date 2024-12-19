@@ -46,7 +46,7 @@ const Messform = () => {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("http://localhost:5000/api/message", {
+      const response = await fetch("https://golden-cocada-649fc2.netlify.app/api/message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
