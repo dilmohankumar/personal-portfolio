@@ -42,7 +42,7 @@ const SignupPage = () => {
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          "https://golden-cocada-649fc2.netlify.app/api/signup",
+          "http://localhost:5000/api/signup",
           formData
         );
         const { token } = response.data;

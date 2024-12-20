@@ -14,7 +14,7 @@ function CollectionPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://golden-cocada-649fc2.netlify.app/api/collections");
+        const response = await fetch("http://localhost:5000/api/collections");
         const data = await response.json();
         console.log("API Response:", data);
         setCollections(data);

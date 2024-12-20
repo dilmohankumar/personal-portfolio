@@ -14,7 +14,7 @@ function CollectionPage() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://golden-cocada-649fc2.netlify.app/startup/startupmessages"
+          "http://localhost:5000/startup/startupmessages"
         );
         const data = await response.json();
         const sortedData = data.reverse();
