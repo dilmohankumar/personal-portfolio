@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const router = express.Router();
+const serverless =require('serverless-http');
 
 const crypto = require("crypto");
 const Razorpay = require("razorpay");
@@ -16,13 +17,13 @@ const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 const authRoutes = require("./models/Auth.js");
 const loginRoute = require("./models/Authlogin");
+const ServerlessHttp = require("serverless-http");
 
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.options('*', cors()); 
 app.use(bodyParser.json());
 app.use("/api/message", messageRoutes);
 app.use("/api", MentorshipRouter);
@@ -31,6 +32,14 @@ app.use("/api/project", projectRouter);
 app.use("/", collectionsRoute);
 app.use("/api/signup", authRoutes);
 app.use("/api", loginRoute);
+
+app.use(cors({
+  origin: ['https://personal-portfolio-kfzs.vercel.app'], // Allow specific origin
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
+
 
 mongoose
   .connect(process.env.MONGODB_URI, {
@@ -78,3 +87,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+app.use('/.netlify/functions/api',router);
+module.exports.handler=Serverless(app)
