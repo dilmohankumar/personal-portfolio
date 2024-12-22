@@ -14,7 +14,6 @@ function CollectionPage() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://comforting-caramel-4f804e.netlify.app/startupmessages"
         );
         const data = await response.json();
         const sortedData = data.reverse();

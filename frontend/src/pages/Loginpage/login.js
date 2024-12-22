@@ -25,7 +25,7 @@ const LoginPage = () => {
     if (validate()) {
       try {
         const response = await axios.post(
-          "https://comforting-caramel-4f804e.netlify.app/api/login",
+          "https://personal-portfolio-4rrr.onrender.com/api/login",
           formData
         );
         const { token } = response.data;

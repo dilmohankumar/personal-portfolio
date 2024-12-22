@@ -13,7 +13,7 @@ function CollectionPage() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://comforting-caramel-4f804e.netlify.app/message/messages"
+          "https://personal-portfolio-4rrr.onrender.com/api/message/messages"
         );
         const data = await response.json();
         const sortedData = data.reverse();

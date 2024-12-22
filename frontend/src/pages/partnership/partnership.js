@@ -30,7 +30,7 @@ const Partnership = () => {
   const currency = "INR";
 
   const paymentHandler = async (amount, receipt, e) => {
-    const response = await fetch("https://comforting-caramel-4f804e.netlify.app/order", {
+    const response = await fetch("https://personal-portfolio-4rrr.onrender.com/order", {
       method: "POST",
       body: JSON.stringify({
         amount,
@@ -56,7 +56,7 @@ const Partnership = () => {
           ...response,
         };
         const validateRes = await fetch(
-          "https://comforting-caramel-4f804e.netlify.app/validate",
+          "https://personal-portfolio-4rrr.onrender.com/order/validate",
           {
             method: "POST",
             body: JSON.stringify(body),

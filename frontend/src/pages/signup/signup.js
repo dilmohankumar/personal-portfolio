@@ -42,7 +42,7 @@ const SignupPage = () => {
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          "https://comforting-caramel-4f804e.netlify.app/api/signup",
+          "https://personal-portfolio-4rrr.onrender.com/api/signup",
           formData
         );
         const { token } = response.data;
