@@ -17,11 +17,14 @@ const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 const authRoutes = require("./models/Auth.js");
 const loginRoute = require("./models/Authlogin");
-const ServerlessHttp = require("serverless-http");
 
 dotenv.config();
 
 const app = express();
+app.get(`/`,(req, res)=>{
+  res.json(`working`)
+})
+
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
@@ -87,5 +90,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-app.use('/.netlify/functions/api',router);
-module.exports.handler=Serverless(app)

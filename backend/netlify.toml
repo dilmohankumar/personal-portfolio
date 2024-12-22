@@ -1,7 +1,0 @@
-[[headers]]
-  for = "/api/*"  # Apply headers to all API routes
-  [headers.values]
-    Access-Control-Allow-Origin = "*"  # Allow all origins or specify the trusted origin
-    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
-    Access-Control-Allow-Headers = "Content-Type, Authorization"
-    Access-Control-Allow-Credentials = "true"
