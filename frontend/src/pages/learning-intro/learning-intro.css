@@ -1,13 +1,162 @@
-#input-result,
-#input-mentorship {
-  width: 15.3rem;
-  height: 3rem;
+.learning-container-fin {
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  background-color: #fffbf0;
+  padding: 2rem;
 }
-#input-journey {
-  width: 266%;
-  height: 8rem;
-  border-radius: 5px;
-  border-color: #b3b3b3d1;
-  padding: 10px;
+
+.learning-header-logo-wrapper-fin {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.learning-header-logo-wrapper-fin img {
+  width: 5rem;
+  height: 5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.learning-header-logo-wrapper-fin img:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+.learning-form-wrapper-fin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.learning-form-inner-wrapper-fin {
+  background-color: #ffe4e1;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.learning-form-inner-wrapper-fin:hover {
+  transform: translateY(-10px) rotate(-1deg);
+}
+
+.learning-logo-section-wrapper-fin {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.learning-form-logo-img-fin {
+  width: 10rem;
+  height: 10rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.learning-form-text-wrapper-fin {
+  margin-bottom: 1rem;
+}
+
+.learning-form-header-fin {
+  font-size: 2rem;
+  color: #ff6347;
+  text-shadow: 2px 2px #ffa07a;
+}
+
+.learning-input-wrapper-fin {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.learning-input-column-wrapper-fin {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.learning-input-field-group-fin {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.learning-input-label-fin {
+  font-weight: bold;
+  color: #ff4500;
+}
+
+.learning-input-field-fin {
+  padding: 0.75rem;
+  border: 2px solid #ff69b4;
+  border-radius: 15px;
+  background-color: #fffacd;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.learning-input-field-fin:focus {
+  border-color: #ff4500;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
   outline: none;
+}
+
+.learning-error-border-fin {
+  border-color: #dc3545;
+}
+
+.learning-error-text-fin {
+  color: #dc3545;
+  font-size: 0.875rem;
+}
+
+.learning-textarea-field-fin {
+  padding: 0.75rem;
+  border: 2px solid #ff69b4;
+  border-radius: 15px;
+  background-color: #fffacd;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.learning-textarea-field-fin:focus {
+  border-color: #ff4500;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+  outline: none;
+}
+
+.learning-submit-wrapper-fin {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.learning-submit-btn-fin {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ff4500, #ff69b4);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.learning-submit-btn-fin:hover {
+  background: linear-gradient(45deg, #ff69b4, #ff4500);
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.learning-submit-btn-fin:active {
+  transform: scale(0.95);
 }

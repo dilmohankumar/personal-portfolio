@@ -1,10 +1,9 @@
-@media (max-width: 740px) {
-  .textarea-fieldp {
-    width: 266% !important;
-    height: 8rem;
-    border-radius: 5px;
-    border-color: #b3b3b3d1;
-    padding: 10px;
-    outline: none;
+@media (max-width: 768px) {
+  .project-discuss__title {
+    font-size: 1.5rem;
+  }
+
+  .project-discuss__form-wrapper {
+    padding: 1.5rem;
   }
 }

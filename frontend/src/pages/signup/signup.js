@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./signup.css";
+import { Link } from "react-router-dom";
+import Logo from "../../assests/logo.png";
 
 const SignupPage = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +13,8 @@ const SignupPage = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false); // Add state for password visibility
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -42,7 +46,7 @@ const SignupPage = () => {
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          "https://personal-portfolio-4rrr.onrender.com/api/signup",
+          "http://localhost:5000/api/signup",
           formData
         );
         const { token } = response.data;
@@ -67,9 +71,22 @@ const SignupPage = () => {
     }
   };
 
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible); // Toggle password visibility
+  };
+
   return (
     <div className="signup-page">
       <div className="signup-page__container">
+        <div className="signup-header-logo-wrapper">
+          <Link to="/">
+            <img
+              src={Logo}
+              className="startupmess-logo"
+              alt="logo"
+            />
+          </Link>
+        </div>
         <h1 className="signup-page__title">Create an Account</h1>
         <form className="signup-page__form" onSubmit={handleSubmit}>
           <div className="signup-page__input-group">
@@ -114,17 +131,26 @@ const SignupPage = () => {
             <label htmlFor="password" className="signup-page__label">
               Password
             </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              className={`signup-page__input ${
-                errors.password ? "signup-page__input--error" : ""
-              }`}
-              placeholder="Enter your password"
-              value={formData.password}
-              onChange={handleInputChange}
-            />
+            <div className="password-wrapper">
+              <input
+                type={passwordVisible ? "text" : "password"} // Toggle the input type
+                id="password"
+                name="password"
+                className={`signup-page__input ${
+                  errors.password ? "signup-page__input--error" : ""
+                }`}
+                placeholder="Enter your password"
+                value={formData.password}
+                onChange={handleInputChange}
+              />
+              <button
+                type="button"
+                className="password-toggle-btn"
+                onClick={togglePasswordVisibility}
+              >
+                {passwordVisible ? "Hide" : "Show"} {/* Toggle the button text */}
+              </button>
+            </div>
             {errors.password && (
               <span className="signup-page__error">{errors.password}</span>
             )}

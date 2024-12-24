@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./startupmess.css";
-import "./responsive.css";
+import { Link, useNavigate } from "react-router-dom";
 import Developer from "../../assests/developer.png";
 import Logo from "../../assests/logo.png";
-import { Link, useNavigate } from "react-router-dom";
+import "./responsive.css";
+import "./startupmess.css";
 
 const StartupMess = () => {
   const [formData, setFormData] = useState({
@@ -50,7 +50,7 @@ const StartupMess = () => {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("https://personal-portfolio-4rrr.onrender.com/api/startup", {
+      const response = await fetch("http://localhost:5000/api/startup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -77,45 +77,38 @@ const StartupMess = () => {
   };
 
   return (
-    <div className="bodyy">
-      <div className="header-logo" id="headerp">
+    <div className="startupmess-container">
+      <div className="startupmess-header-logo-wrapper">
         <Link to="/">
           <img
             src={Logo}
-            style={{ width: "5rem", height: "5rem" }}
+            className="startupmess-logo"
             alt="logo"
           />
         </Link>
       </div>
-      {/* ---- Form Start ---- */}
-      <div className="form-containerpp">
-        <div
-          className="form-container"
-          style={{ backgroundColor: "#d1acf614" }}
-        >
-          <div className="logo-section">
+
+      <div className="startupmess-form-container">
+        <div className="startupmess-form-inner-wrapper">
+          <div className="startupmess-logo-section-wrapper">
             <img
               src={Developer}
-              style={{ width: "10rem", height: "10rem" }}
-              className="form-logo"
+              className="startupmess-form-logo"
               alt="logo"
             />
-            <div className="formw">
-              <h1 className="form-title">
-                Looking to collaborate on a startup? I’m totally up for it.
-              </h1>
-            </div>
+            <h1 className="startupmess-form-header">Looking to collaborate on a startup? I’m totally up for it.</h1>
           </div>
+
           <form onSubmit={handleSubmit}>
-            <div className="input-section">
-              <div className="input-col">
-                <div className="flexs">
-                  <label className="input-label" htmlFor="input-name">
+            <div className="startupmess-input-section">
+              <div className="startupmess-input-column-wrapper">
+                <div className="startupmess-input-field-group">
+                  <label className="startupmess-input-label" htmlFor="input-name">
                     Name
                   </label>
                   <input
-                    className={`input-field ${
-                      errors.name ? "error-border" : ""
+                    className={`startupmess-input-field ${
+                      errors.name ? "startupmess-error-border" : ""
                     }`}
                     id="input-name"
                     name="name"
@@ -124,16 +117,17 @@ const StartupMess = () => {
                     placeholder="Enter Your Name..."
                   />
                   {errors.name && (
-                    <span className="error-message">{errors.name}</span>
+                    <span className="startupmess-error-text">{errors.name}</span>
                   )}
                 </div>
-                <div className="flexs">
-                  <label className="input-label" htmlFor="input-email">
+
+                <div className="startupmess-input-field-group">
+                  <label className="startupmess-input-label" htmlFor="input-email">
                     Email
                   </label>
                   <input
-                    className={`input-field ${
-                      errors.email ? "error-border" : ""
+                    className={`startupmess-input-field ${
+                      errors.email ? "startupmess-error-border" : ""
                     }`}
                     id="input-email"
                     name="email"
@@ -142,21 +136,22 @@ const StartupMess = () => {
                     placeholder="Enter Your Email..."
                   />
                   {errors.email && (
-                    <span className="error-message">{errors.email}</span>
+                    <span className="startupmess-error-text">{errors.email}</span>
                   )}
                 </div>
               </div>
-              <div className="input-col">
-                <div className="flexs">
+
+              <div className="startupmess-input-column-wrapper">
+                <div className="startupmess-input-field-group">
                   <label
-                    className="input-label"
+                    className="startupmess-input-label"
                     htmlFor="input-project-category"
                   >
                     Project category
                   </label>
                   <select
-                    className={`input-field ${
-                      errors.projectCategory ? "error-border" : ""
+                    className={`startupmess-input-field ${
+                      errors.projectCategory ? "startupmess-error-border" : ""
                     }`}
                     id="input-project-category"
                     name="projectCategory"
@@ -171,18 +166,19 @@ const StartupMess = () => {
                     <option value="App Design">App Design</option>
                   </select>
                   {errors.projectCategory && (
-                    <span className="error-message">
+                    <span className="startupmess-error-text">
                       {errors.projectCategory}
                     </span>
                   )}
                 </div>
-                <div className="flexs">
-                  <label className="input-label" htmlFor="input-your-focus">
+
+                <div className="startupmess-input-field-group">
+                  <label className="startupmess-input-label" htmlFor="input-your-focus">
                     Your focus
                   </label>
                   <select
-                    className={`input-field ${
-                      errors.focus ? "error-border" : ""
+                    className={`startupmess-input-field ${
+                      errors.focus ? "startupmess-error-border" : ""
                     }`}
                     id="input-your-focus"
                     name="focus"
@@ -197,17 +193,18 @@ const StartupMess = () => {
                     <option value="founder">Founder</option>
                   </select>
                   {errors.focus && (
-                    <span className="error-message">{errors.focus}</span>
+                    <span className="startupmess-error-text">{errors.focus}</span>
                   )}
                 </div>
               </div>
-              <div className="flexs">
-                <label className="input-label" htmlFor="input-details">
+
+              <div className="startupmess-input-field-group">
+                <label className="startupmess-input-label" htmlFor="input-details">
                   Details
                 </label>
                 <textarea
-                  className={`textarea-fields ${
-                    errors.details ? "error-border" : ""
+                  className={`startupmess-textarea-field ${
+                    errors.details ? "startupmess-error-border" : ""
                   }`}
                   id="input-details"
                   name="details"
@@ -216,19 +213,19 @@ const StartupMess = () => {
                   placeholder="Send Details..."
                 ></textarea>
                 {errors.details && (
-                  <span className="error-message">{errors.details}</span>
+                  <span className="startupmess-error-text">{errors.details}</span>
                 )}
               </div>
             </div>
-            <div className="button-section">
-              <button type="submit" className="send-button">
+
+            <div className="startupmess-submit-wrapper">
+              <button type="submit" className="startupmess-submit-btn">
                 Send
               </button>
             </div>
           </form>
         </div>
       </div>
-      {/* ---- Form End ---- */}
     </div>
   );
 };

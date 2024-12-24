@@ -51,7 +51,7 @@ const LearningIntro = () => {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("https://personal-portfolio-4rrr.onrender.com/api/submit", {
+      const response = await fetch("http://localhost:5000/api/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -84,8 +84,8 @@ const LearningIntro = () => {
   };
 
   return (
-    <div className="bodyy">
-      <div className="header-logo" id="headerp">
+    <div className="learning-container-fin">
+      <div className="learning-header-logo-wrapper-fin" id="headerp">
         <Link to="/">
           <img
             src={Logo}
@@ -95,35 +95,35 @@ const LearningIntro = () => {
         </Link>
       </div>
       {/* ---- Form Start ---- */}
-      <div className="form-containerpp">
+      <div className="learning-form-wrapper-fin">
         <div
-          className="form-container"
-          style={{ backgroundColor: "#d1acf614" }}
+          className="learning-form-inner-wrapper-fin"
+        
         >
-          <div className="logo-section">
+          <div className="learning-logo-section-wrapper-fin">
             <img
               src={Developer}
               style={{ width: "10rem", height: "10rem" }}
-              className="form-logo"
-              alt="logo"
+              className="learning-form-logo-img-fin"
+              alt="developer"
             />
-            <div className="formw">
-              <h1 className="form-title">
+            <div className="learning-form-text-wrapper-fin">
+              <h1 className="learning-form-header-fin">
                 I'm excited about the opportunity to learn from you! Could you
                 share a little about yourself?
               </h1>
             </div>
           </div>
           <form onSubmit={handleSubmit}>
-            <div className="input-section">
-              <div className="input-col">
-                <div className="flexs">
-                  <label className="input-label" htmlFor="input-name">
+            <div className="learning-input-wrapper-fin">
+              <div className="learning-input-column-wrapper-fin">
+                <div className="learning-input-field-group-fin">
+                  <label className="learning-input-label-fin" htmlFor="input-name">
                     Name
                   </label>
                   <input
-                    className={`input-field ${
-                      errors.name ? "error-border" : ""
+                    className={`learning-input-field-fin ${
+                      errors.name ? "learning-error-border-fin" : ""
                     }`}
                     id="input-name"
                     name="name"
@@ -133,16 +133,16 @@ const LearningIntro = () => {
                     autoComplete="name"
                   />
                   {errors.name && (
-                    <span className="error-message">{errors.name}</span>
+                    <span className="learning-error-text-fin">{errors.name}</span>
                   )}
                 </div>
-                <div className="flexs">
-                  <label className="input-label" htmlFor="input-email">
+                <div className="learning-input-field-group-fin">
+                  <label className="learning-input-label-fin" htmlFor="input-email">
                     Email
                   </label>
                   <input
-                    className={`input-field ${
-                      errors.email ? "error-border" : ""
+                    className={`learning-input-field-fin ${
+                      errors.email ? "learning-error-border-fin" : ""
                     }`}
                     id="input-email"
                     name="email"
@@ -152,18 +152,21 @@ const LearningIntro = () => {
                     autoComplete="email"
                   />
                   {errors.email && (
-                    <span className="error-message">{errors.email}</span>
+                    <span className="learning-error-text-fin">{errors.email}</span>
                   )}
                 </div>
               </div>
-              <div className="input-col">
-                <div className="flexs">
-                  <label className="input-label" htmlFor="input-mentorship">
+              <div className="learning-input-column-wrapper-fin">
+                <div className="learning-input-field-group-fin">
+                  <label
+                    className="learning-input-label-fin"
+                    htmlFor="input-mentorship"
+                  >
                     Types of Mentorship
                   </label>
                   <select
-                    className={`input-field ${
-                      errors.mentorship ? "error-border" : ""
+                    className={`learning-input-field-fin ${
+                      errors.mentorship ? "learning-error-border-fin" : ""
                     }`}
                     id="input-mentorship"
                     name="mentorship"
@@ -178,16 +181,16 @@ const LearningIntro = () => {
                     <option value="App Design">App Design</option>
                   </select>
                   {errors.mentorship && (
-                    <span className="error-message">{errors.mentorship}</span>
+                    <span className="learning-error-text-fin">{errors.mentorship}</span>
                   )}
                 </div>
-                <div className="flexs">
-                  <label className="input-label" htmlFor="input-result">
+                <div className="learning-input-field-group-fin">
+                  <label className="learning-input-label-fin" htmlFor="input-result">
                     Expected result
                   </label>
                   <select
-                    className={`input-field ${
-                      errors.result ? "error-border" : ""
+                    className={`learning-input-field-fin ${
+                      errors.result ? "learning-error-border-fin" : ""
                     }`}
                     id="input-result"
                     name="result"
@@ -208,17 +211,17 @@ const LearningIntro = () => {
                     </option>
                   </select>
                   {errors.result && (
-                    <span className="error-message">{errors.result}</span>
+                    <span className="learning-error-text-fin">{errors.result}</span>
                   )}
                 </div>
               </div>
-              <div className="flexs">
-                <label className="input-label" htmlFor="input-journey">
+              <div className="learning-input-field-group-fin">
+                <label className="learning-input-label-fin" htmlFor="input-journey">
                   Your journey
                 </label>
                 <textarea
-                  className={`textarea-field ${
-                    errors.journey ? "error-border" : ""
+                  className={`learning-textarea-field-fin ${
+                    errors.journey ? "learning-error-border-fin" : ""
                   }`}
                   id="input-journey"
                   name="journey"
@@ -228,12 +231,12 @@ const LearningIntro = () => {
                   autoComplete="off"
                 ></textarea>
                 {errors.journey && (
-                  <span className="error-message">{errors.journey}</span>
+                  <span className="learning-error-text-fin">{errors.journey}</span>
                 )}
               </div>
             </div>
-            <div className="button-section">
-              <button type="submit" className="send-button">
+            <div className="learning-submit-wrapper-fin">
+              <button type="submit" className="learning-submit-btn-fin">
                 Send
               </button>
             </div>

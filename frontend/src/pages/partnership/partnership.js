@@ -30,7 +30,7 @@ const Partnership = () => {
   const currency = "INR";
 
   const paymentHandler = async (amount, receipt, e) => {
-    const response = await fetch("https://personal-portfolio-4rrr.onrender.com/order", {
+    const response = await fetch("http://localhost:5000/order", {
       method: "POST",
       body: JSON.stringify({
         amount,
@@ -56,7 +56,7 @@ const Partnership = () => {
           ...response,
         };
         const validateRes = await fetch(
-          "https://personal-portfolio-4rrr.onrender.com/order/validate",
+          "http://localhost:5000/order/validate",
           {
             method: "POST",
             body: JSON.stringify(body),

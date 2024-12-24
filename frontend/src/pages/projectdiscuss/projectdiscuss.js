@@ -52,7 +52,7 @@ const ProjectDiscuss = () => {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("https://personal-portfolio-4rrr.onrender.com/api/project", {
+      const response = await fetch("http://localhost:5000/api/project", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -79,164 +79,156 @@ const ProjectDiscuss = () => {
   };
 
   return (
-    <div className="bodyy">
-      <div className="header-logo" id="headerp">
-        <Link to="/">
+    <div className="project-discuss">
+      <header className="project-discuss__header">
+        <Link to="/" className="project-discuss__logo-link">
           <img
             src={Logo}
-            style={{ width: "5rem", height: "5rem" }}
-            alt="logo"
+            className="project-discuss__logo"
+            alt="Company Logo"
           />
         </Link>
-      </div>
-      {/* ----form-start----- */}
-      <div className="form-containerpp">
-        <div
-          className="form-container"
-          style={{ backgroundColor: "#d1ba5438" }}
-        >
-          <div className="logo-section">
+      </header>
+
+      <div className="project-discuss__form-container">
+        <div className="project-discuss__form-wrapper">
+          <div className="project-discuss__intro">
             <img
               src={Developer}
-              style={{ width: "10rem", height: "10rem" }}
-              className="form-logo"
-              alt="logo"
+              className="project-discuss__image"
+              alt="Developer Illustration"
             />
-            <div className="formw">
-              <h1 className="form-title">
-                I’m thrilled to hear about your project! Let’s dive in and get
-                started
-              </h1>
-            </div>
+            <h1 className="project-discuss__title">
+              Let’s discuss your project and bring your ideas to life!
+            </h1>
           </div>
-          <form onSubmit={handleSubmit}>
-            <div className="input-section">
-              <div className="input-col">
-                <div className="flexs">
-                  <label className="input-label" htmlFor="input-name">
-                    Name
-                  </label>
-                  <input
-                    className={`input-field ${
-                      errors.name ? "error-border" : ""
-                    }`}
-                    id="input-name"
-                    name="name"
-                    placeholder="Enter Your Name..."
-                    autoComplete="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                  {errors.name && (
-                    <span className="error-message">{errors.name}</span>
-                  )}
-                </div>
-                <div className="flexs">
-                  <label className="input-label" htmlFor="input-email">
-                    Email
-                  </label>
-                  <input
-                    className={`input-field ${
-                      errors.email ? "error-border" : ""
-                    }`}
-                    id="input-email"
-                    name="email"
-                    placeholder="Enter Your Email..."
-                    autoComplete="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                  {errors.email && (
-                    <span className="error-message">{errors.email}</span>
-                  )}
-                </div>
-              </div>
-              <div className="input-col">
-                <div className="flexs">
-                  <label
-                    className="input-label"
-                    htmlFor="input-project-category"
-                  >
-                    Project category
-                  </label>
-                  <select
-                    className={`input-field ${
-                      errors.projectCategory ? "error-border" : ""
-                    }`}
-                    id="input-project-category"
-                    name="projectCategory"
-                    value={formData.projectCategory}
-                    onChange={handleChange}
-                  >
-                    <option value="" disabled>
-                      Select an option...
-                    </option>
-                    <option value="responsive_design">Responsive design</option>
-                    <option value="web_design">Web Design</option>
-                    <option value="app_design">App Design</option>
-                  </select>
-                  {errors.projectCategory && (
-                    <span className="error-message">
-                      {errors.projectCategory}
-                    </span>
-                  )}
-                </div>
-                <div className="flexs">
-                  <label className="input-label" htmlFor="input-project-budget">
-                    Project budget
-                  </label>
-                  <select
-                    className={`input-field ${
-                      errors.projectBudget ? "error-border" : ""
-                    }`}
-                    id="input-project-budget"
-                    name="projectBudget"
-                    value={formData.projectBudget}
-                    onChange={handleChange}
-                  >
-                    <option value="" disabled>
-                      Select an option...
-                    </option>
-                    <option value="2000_5000">$2,000 - $5,000</option>
-                    <option value="5000_10000">$5,000 - $10,000</option>
-                    <option value="10000_plus">$10,000 +</option>
-                  </select>
-                  {errors.projectBudget && (
-                    <span className="error-message">
-                      {errors.projectBudget}
-                    </span>
-                  )}
-                </div>
-              </div>
-              <label className="input-label" htmlFor="input-details">
+
+          <form onSubmit={handleSubmit} className="project-discuss__form">
+            <div className="project-discuss__input-group">
+              <label htmlFor="name" className="project-discuss__label">
+                Name
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                className={`project-discuss__input ${
+                  errors.name ? "project-discuss__input--error" : ""
+                }`}
+                placeholder="Enter Your Name..."
+                value={formData.name}
+                onChange={handleChange}
+              />
+              {errors.name && (
+                <span className="project-discuss__error">{errors.name}</span>
+              )}
+            </div>
+
+            <div className="project-discuss__input-group">
+              <label htmlFor="email" className="project-discuss__label">
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                className={`project-discuss__input ${
+                  errors.email ? "project-discuss__input--error" : ""
+                }`}
+                placeholder="Enter Your Email..."
+                value={formData.email}
+                onChange={handleChange}
+              />
+              {errors.email && (
+                <span className="project-discuss__error">{errors.email}</span>
+              )}
+            </div>
+
+            <div className="project-discuss__input-group">
+              <label
+                htmlFor="projectCategory"
+                className="project-discuss__label"
+              >
+                Project Category
+              </label>
+              <select
+                id="projectCategory"
+                name="projectCategory"
+                className={`project-discuss__select ${
+                  errors.projectCategory ? "project-discuss__select--error" : ""
+                }`}
+                value={formData.projectCategory}
+                onChange={handleChange}
+              >
+                <option value="" disabled>
+                  Select an option...
+                </option>
+                <option value="responsive_design">Responsive Design</option>
+                <option value="web_design">Web Design</option>
+                <option value="app_design">App Design</option>
+              </select>
+              {errors.projectCategory && (
+                <span className="project-discuss__error">
+                  {errors.projectCategory}
+                </span>
+              )}
+            </div>
+
+            <div className="project-discuss__input-group">
+              <label
+                htmlFor="projectBudget"
+                className="project-discuss__label"
+              >
+                Project Budget
+              </label>
+              <select
+                id="projectBudget"
+                name="projectBudget"
+                className={`project-discuss__select ${
+                  errors.projectBudget ? "project-discuss__select--error" : ""
+                }`}
+                value={formData.projectBudget}
+                onChange={handleChange}
+              >
+                <option value="" disabled>
+                  Select an option...
+                </option>
+                <option value="2000_5000">$2,000 - $5,000</option>
+                <option value="5000_10000">$5,000 - $10,000</option>
+                <option value="10000_plus">$10,000+</option>
+              </select>
+              {errors.projectBudget && (
+                <span className="project-discuss__error">
+                  {errors.projectBudget}
+                </span>
+              )}
+            </div>
+
+            <div className="project-discuss__input-group">
+              <label htmlFor="details" className="project-discuss__label">
                 Details
               </label>
               <textarea
-                className={`textarea-fieldp ${
-                  errors.details ? "error-border" : ""
-                }`}
-                id="input-detailp"
+                id="details"
                 name="details"
-                placeholder="Send Details..."
-                autoComplete="off"
+                className={`project-discuss__textarea ${
+                  errors.details ? "project-discuss__textarea--error" : ""
+                }`}
+                placeholder="Enter project details..."
                 value={formData.details}
                 onChange={handleChange}
               ></textarea>
               {errors.details && (
-                <span className="error-message" id="mess">
-                  {errors.details}
-                </span>
+                <span className="project-discuss__error">{errors.details}</span>
               )}
             </div>
-            <div className="button-section">
-              <button type="submit" className="send-button">
-                Send
-              </button>
-            </div>
+
+            <button type="submit" className="project-discuss__submit">
+              Send
+            </button>
           </form>
         </div>
       </div>
-      {/* ----form-end----- */}
     </div>
   );
 };

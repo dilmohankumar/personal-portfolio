@@ -140,103 +140,8 @@
   height: auto;
 }
 
-/* ------- Bio Section CSS ------- */
-.bio-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(135deg, #ff7eb3, #ff758c);
-  color: white;
-  padding: 3rem 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  margin: 2rem auto;
-  max-width: 900px;
-  overflow: hidden;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
+/* ------- Enhanced Bio Section CSS ------- */
 
-.bio-container:hover {
-  background: linear-gradient(135deg, #ff758c, #ff9770);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-  transform: scale(1.02);
-}
-
-/* Title Styling */
-.bio-title {
-  font-size: 2.8rem;
-  font-weight: 800;
-  text-transform: capitalize;
-  margin-bottom: 1.5rem;
-  line-height: 1.3;
-  position: relative;
-}
-
-.bio-title::after {
-  content: "";
-  display: block;
-  width: 50%;
-  height: 4px;
-  background: linear-gradient(90deg, #ffe259, #ffa751);
-  margin: 0.5rem auto 0;
-  border-radius: 8px;
-  transition: width 0.3s ease;
-}
-
-.bio-container:hover .bio-title::after {
-  width: 80%;
-}
-
-/* Description Styling */
-.bio-description {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  font-weight: 400;
-  max-width: 750px;
-  transition: color 0.3s ease;
-}
-
-.bio-container:hover .bio-description {
-  color: #ffe9f0;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .bio-title {
-    font-size: 2.4rem;
-  }
-
-  .bio-description {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .bio-container {
-    padding: 2.5rem 1.5rem;
-  }
-
-  .bio-title {
-    font-size: 2rem;
-  }
-
-  .bio-description {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .bio-title {
-    font-size: 1.8rem;
-  }
-
-  .bio-description {
-    font-size: 0.95rem;
-  }
-}
-/* ------- Bio Section CSS ------- */
 .bio-container {
   display: flex;
   flex-direction: column;
@@ -246,18 +151,28 @@
   background: linear-gradient(135deg, #0061f2, #009efd);
   color: white;
   padding: 3rem 2rem;
-  border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   margin: 2rem auto;
   max-width: 100%;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
 }
 
-.bio-container:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(135deg, #0056e0, #007eed);
+.bio-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.2),
+    transparent 70%
+  );
+  z-index: 0;
+  animation: glow-effect 5s infinite alternate ease-in-out;
 }
 
 /* Title Styling */
@@ -267,14 +182,17 @@
   text-transform: capitalize;
   margin-bottom: 1.5rem;
   line-height: 1.3;
-  background: linear-gradient(90deg, #ffffff, #82caff);
+  background: linear-gradient(90deg, #ffffff9f, #82cbffa2, #ffffff65);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: background-position 0.3s ease;
+  background-size: 200% auto;
+  transition: background-position 0.5s ease-in-out;
+  position: relative;
+  z-index: 1;
 }
 
 .bio-container:hover .bio-title {
-  background-position: 200% 0;
+  background-position: 100% 0;
 }
 
 /* Description Styling */
@@ -283,12 +201,25 @@
   line-height: 1.8;
   font-weight: 400;
   max-width: 750px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
   color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  z-index: 1;
 }
 
 .bio-container:hover .bio-description {
   color: #dceeff;
+  transform: translateY(-5px);
+}
+
+/* Keyframe Animations */
+@keyframes glow-effect {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive Design */
@@ -326,74 +257,105 @@
   }
 }
 
-/* ------- Skills Section CSS ------- */
+/* ------- Skills Section CSS (Cartoonish Theme) ------- */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   padding: 3rem 1.5rem;
-  background-color: #f9fafb;
+  background: linear-gradient(145deg, #fffbf1, #f9fafb);
+  border-radius: 15px;
 }
 
 .skill-card,
 .skill-card-2,
 .skill-card-3 {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 20px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   max-width: 350px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  
+  position: relative;
 }
 
 .skill-card:hover,
 .skill-card-2:hover,
 .skill-card-3:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px) scale(1.05) rotate(-2deg);
+  box-shadow: 0 16px 25px rgba(0, 0, 0, 0.2), 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .skill-image {
-  width: 25%;
-  height: 100px;
-  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 1rem;
+  object-fit: contain;
+  background-color: #ffebd4;
+  padding: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .skill-title {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #222;
+  color: #3d5afe;
   margin: 1.5rem 0 0.5rem;
   text-transform: capitalize;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px #ffa726;
 }
 
 .skill-description {
   font-size: 1rem;
   line-height: 1.6;
-  color: #555;
+  color: #757575;
   margin: 0 1.5rem 1rem;
+  font-style: italic;
 }
 
 .skill-languages,
 .skill-tools {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #0073e6;
+  color: #ff5722;
   margin-top: 1rem;
   text-transform: uppercase;
+  animation: pop 1.2s ease forwards;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .skill-languages-list,
 .skill-mentor-stats-list {
   font-size: 1rem;
-  color: #666;
+  color: #4caf50;
   margin: 0.5rem 1.5rem 1rem;
   line-height: 1.6;
   list-style: none;
@@ -403,26 +365,26 @@
 .skill-mentor-stats-list li {
   margin-bottom: 0.5rem;
   position: relative;
-  padding-left: 20px;
 }
 
 .skill-mentor-stats-list li::before {
   position: absolute;
-  left: 0;
+  left: -15px;
   top: 50%;
   transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  background: #0073e6;
+  width: 10px;
+  height: 10px;
+  background: #ff4081;
+  border: 2px solid #ffffff;
   border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Recent Work Section */
 .recent-work-container {
-  background: #f5f5f5; /* Soft, clean background color */
+  background: linear-gradient(135deg, #ffe259, #51c8ff); /* Warm and playful gradient */
   padding: 6rem 2rem;
   text-align: center;
-  border-radius: 16px;
   max-width: 100%;
   margin: 3rem auto;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
@@ -430,10 +392,6 @@
   overflow: hidden;
   transform: scale(1); /* Smooth scaling effect */
   transition: transform 0.3s ease-in-out;
-}
-
-.recent-work-container:hover {
-  transform: scale(1.05); /* Subtle zoom effect on hover */
 }
 
 /* Title Styling */
@@ -506,43 +464,54 @@
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+/* --- Project Cards Container --- */
 .project-cards-container {
-  color: white;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
-  padding: 5rem;
+  padding: 4rem;
+  background: linear-gradient(135deg, #ffecd2, #9fe2fc); /* Vibrant background for a playful feel */
+  color: white;
 }
+
+/* --- Individual Project Card --- */
 .project-card-1 {
-  border: 1px solid rgb(220, 218, 218);
+  border: 2px solid #f3f4f6;
   border-radius: 1rem;
   position: relative;
   max-width: 100%;
-  width: 100%;
-  height: auto;
   aspect-ratio: 1.2 / 1;
-  box-sizing: border-box;
-  align-items: stretch;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease-in-out;
 }
+
+/* --- Hover Effect for Card --- */
 .project-card-1:hover {
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  transform: scale(1.05);
+  transform: scale(1.1) rotate(-3deg); /* Bouncy hover effect */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  z-index: 5;
 }
+
+/* --- Image Styling --- */
 .project-card-1 img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   border-radius: 1rem;
-  display: block;
-  aspect-ratio: 1.2 / 1;
-  transition: opacity 0.3s ease;
+  transition: transform 0.6s ease-in-out, opacity 0.4s ease;
 }
+
+/* --- Image Hover Animation --- */
+.project-card-1:hover img {
+  transform: scale(1.2); /* Slight zoom for a dynamic effect */
+  opacity: 0.2; /* Fades the image for focus on content */
+}
+
+/* --- Card Content --- */
 .card-content {
-  visibility: hidden;
-  padding: 10px;
+  padding: 15px;
   position: absolute;
   top: 0;
   left: 0;
@@ -552,41 +521,99 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #141c3a;
+  background: linear-gradient(135deg, #25a9e7, #25037c); /* Vibrant gradient background */
+  border-radius: 1rem;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-align: center;
 }
+
+/* --- Content Visibility on Hover --- */
 .project-card-1:hover .card-content {
   opacity: 1;
-  visibility: visible;
+  transform: translateY(0); /* Slides up for a fun reveal */
 }
-.project-card-1:hover img {
-  opacity: 0;
-}
+
+/* --- Card Description --- */
 .card-description {
-  display: block;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0.5rem 0;
-  letter-spacing: 1px;
-  font-weight: 900;
-  text-align: center;
-  font-family: cursive;
+  color: #ffffff;
+  font-family: "Comic Sans MS", cursive; /* Playful, cartoonish font */
+  text-shadow: 2px 2px #00000033; /* Subtle text shadow for depth */
+  letter-spacing: 1.5px;
+  font-weight: bold;
 }
+
+/* --- Call-to-Action Link --- */
 .card-link {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
-  display: inline-block;
-  margin-top: 10px;
-  border: 1px solid #420355;
-  padding: 9px;
-  border-radius: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  font-weight: 600;
+  background: #ff5722; /* Bold button background */
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Cartoonish depth effect */
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* --- Button Hover and Active States --- */
 .card-link:hover {
-  background-color: #420355;
+  background: #d84315; /* Slightly darker shade on hover */
+  transform: scale(1.1) rotate(3deg); /* Fun bounce effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-link:active {
+  transform: scale(0.95); /* Shrink effect on click */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+  .project-cards-container {
+    padding: 3rem;
+    gap: 20px;
+  }
+
+  .card-description {
+    font-size: 1rem;
+  }
+
+  .card-link {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-cards-container {
+    padding: 2rem;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+  }
+
+  .card-link {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-cards-container {
+    padding: 1.5rem;
+    gap: 15px;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+  }
+
+  .card-link {
+    font-size: 0.8rem;
+  }
 }
 /* Container for the GitHub link */
 .github-link {
@@ -598,36 +625,46 @@
 .github-link a {
   text-decoration: none; /* Remove underline */
   display: inline-block;
-  background-color: #222; /* Dark background */
+  background-color: #ff6347; /* Vibrant red background */
   color: #fff; /* White text */
-  font-size: 1.1rem; /* Slightly larger font */
+  font-size: 1.2rem; /* Slightly larger font */
   padding: 15px 35px; /* Larger padding for a more substantial feel */
-  border-radius: 30px; /* Rounded corners */
-  font-weight: 600; /* Bold text for better visibility */
-  letter-spacing: 1px; /* Spacing between letters */
-  transition: all 0.3s ease; /* Smooth transition for all changes */
+  border-radius: 50px; /* More rounded corners */
+  font-weight: 700; /* Bold text for visibility */
+  letter-spacing: 2px; /* More spacing between letters for a fun look */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a cartoonish shadow */
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease;
 }
 
 /* Hover effect for the link */
 .github-link a:hover {
-  background-color: #0073e6; /* Subtle blue on hover */
+  background-color: #ff4500; /* Brighter orange on hover */
   color: #fff; /* Keep text white */
-  transform: translateY(-5px); /* Lift effect */
+  
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
-/* Hover effect for the text */
-.github-link a:hover .github-link-p {
-  color: #ffffff; /* Keep the text bright */
+/* Active effect for the link */
+.github-link a:active {
+  transform: translateY(4px) scale(0.98); /* Slight "press" effect */
+  background-color: #ff6347; /* Original background color */
 }
 
 /* Text styling */
 .github-link-p {
   margin: 0;
   text-transform: uppercase; /* Bold, modern styling */
-  font-family: "Roboto", sans-serif; /* Clean font */
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Playful font */
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
+
+/* Hover effect for the text */
+.github-link a:hover .github-link-p {
+  color: #ffeb3b; /* Bright yellow text on hover */
+  transform: skewX(-5deg); /* Slight skew for a cartoonish feel */
+}
+
 
 .collaboration-header {
   display: flex;
@@ -641,6 +678,9 @@
 }
 .collaboration-header h1 {
   width: 70%;
+  background: linear-gradient(90deg, #6a11cb, #2575fc); /* Gradient text effect */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Transparent fill for gradient */
 }
 .collaboration-image-container {
   display: grid;
@@ -749,66 +789,75 @@
   height: auto !important;
 }
 /* Main collaboration section container */
+
 .collaboration-section {
-  color: rgb(0, 0, 0);
+  color: rgb(15, 2, 2);
   padding: 60px 30px;
   text-align: center;
-  border-radius: 12px;
 
   margin: 40px 0;
   position: relative;
   overflow: hidden;
+
+  animation: zoomIn 0.8s ease;
 }
 
-/* Title Styling */
 .collaboration-title {
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 15px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  color: #110505;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Comic Sans MS", "Roboto", sans-serif;
+  color: #000000;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Text Description Styling */
-.collaboration-text {
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 25px;
-  line-height: 1.8;
-  color: rgba(1, 0, 0, 0.85);
-  font-family: "Arial", sans-serif;
-}
-
-/* Collaboration link container */
 .collaboration-link {
   display: inline-flex;
   align-items: center;
   padding: 15px 30px;
-  background-color: #501cdf;
+  background-color: #0b2ab6;
   color: white;
   font-size: 18px;
   font-weight: 500;
   border-radius: 30px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); */
-  transform: scale(1);
+  box-shadow: 0 4px 20px rgba(255, 105, 180, 0.4);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Hover effect on collaboration link */
 .collaboration-link:hover {
-  background-color: #1252f3;
-  transform: scale(1.05);
+  background-color: #0e19df;
+
 }
 
-/* Icon inside the link */
-.collaboration-icon {
-  margin-right: 10px;
-  font-size: 22px;
-  vertical-align: middle;
+/* Animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .startup-card:hover {

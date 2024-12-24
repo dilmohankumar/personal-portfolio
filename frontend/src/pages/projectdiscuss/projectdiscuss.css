@@ -1,11 +1,155 @@
-.textarea-fieldp {
-  width: 96%;
-  height: 8rem;
-  border-radius: 5px;
-  border-color: #b3b3b3d1;
-  padding: 10px;
+.project-discuss {
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  background-color: #fffbf0;
+  padding: 2rem;
+}
+
+.project-discuss__header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.project-discuss__logo-link img {
+  max-width: 100px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-discuss__logo-link img:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+.project-discuss__form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-discuss__form-wrapper {
+  background-color: #ffe4e1;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-discuss__form-wrapper:hover {
+  transform: translateY(-10px) rotate(-1deg);
+}
+
+.project-discuss__intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project-discuss__image {
+  max-width: 120px;
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.project-discuss__title {
+  font-size: 2rem;
+  color: #ff6347;
+  text-shadow: 2px 2px #ffa07a;
+  margin-bottom: 1rem;
+}
+
+.project-discuss__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-discuss__input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-discuss__label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #ff4500;
+}
+
+.project-discuss__input,
+.project-discuss__select,
+.project-discuss__textarea {
+  padding: 0.75rem;
+  border: 2px solid #ff69b4;
+  border-radius: 15px;
+  font-size: 1rem;
+  background-color: #fffacd;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-discuss__input:focus,
+.project-discuss__select:focus,
+.project-discuss__textarea:focus {
+  border-color: #ff4500;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
   outline: none;
 }
-#mess {
-  position: relative;
+
+.project-discuss__input--error,
+.project-discuss__select--error,
+.project-discuss__textarea--error {
+  border-color: #dc3545;
+}
+
+.project-discuss__error {
+  color: #dc3545;
+  font-size: 0.875rem;
+}
+
+.project-discuss__submit {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ff4500, #ff69b4);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-discuss__submit:hover {
+  background: linear-gradient(45deg, #ff69b4, #ff4500);
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-discuss__submit:active {
+  transform: scale(0.95);
+}
+
+/* Add playful animations to inputs */
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+.project-discuss__input--error,
+.project-discuss__select--error,
+.project-discuss__textarea--error {
+  animation: wiggle 0.3s ease-in-out;
 }

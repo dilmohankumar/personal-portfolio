@@ -3,6 +3,7 @@
     font-size: 1.5rem;
   }
 }
+
 @media (max-width: 740px) {
   .input-col {
     display: flex;

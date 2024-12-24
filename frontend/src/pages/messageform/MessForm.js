@@ -46,7 +46,7 @@ const Messform = () => {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("https://personal-portfolio-4rrr.onrender.com/api/message", {
+      const response = await fetch("http://localhost:5000/api/message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -66,8 +66,8 @@ const Messform = () => {
   };
 
   return (
-    <div className="bodyy">
-      <div className="header-logo" id="headerp">
+    <div className="message-body">
+      <div className="message-header-logo">
         <Link to="/">
           <img
             src={Logo}
@@ -77,34 +77,29 @@ const Messform = () => {
         </Link>
       </div>
       {/* Form Section */}
-      <div className="form-containerpp">
-        <div
-          className="form-container"
-          style={{ backgroundColor: "#00ffff17" }}
-        >
-          <div className="logo-section">
+      <div className="message-form-wrapper">
+        <div className="message-form-box" style={{ backgroundColor: "#00ffff17" }}>
+          <div className="message-logo-section">
             <img
               src={Developer}
-              style={{ width: "10rem", height: "10rem" }}
-              className="form-logo"
+              style={{ width: "5rem", height: "5rem" }}
+              className="message-developer-logo"
               alt="developer"
             />
-            <div className="formw">
-              <h1 className="form-title">
-                I appreciate you reaching out. How may I assist you today?
-              </h1>
-            </div>
+            <h1 className="message-form-title">
+              I appreciate you reaching out. How may I assist you today?
+            </h1>
           </div>
           <form onSubmit={handleSubmit}>
-            <div className="input-section">
-              <div className="input-col">
-                <div className="flexs">
-                  <label className="input-label" htmlFor="name-input">
+            <div className="message-input-section">
+              <div className="message-input-column">
+                <div className="message-input-group">
+                  <label className="message-label" htmlFor="name-input">
                     Name
                   </label>
                   <input
-                    className={`input-field ${
-                      errors.name ? "error-border" : ""
+                    className={`message-input ${
+                      errors.name ? "message-error-border" : ""
                     }`}
                     id="name-input"
                     name="name"
@@ -114,16 +109,16 @@ const Messform = () => {
                     onChange={handleChange}
                   />
                   {errors.name && (
-                    <span className="error-message">{errors.name}</span>
+                    <span className="message-error-message">{errors.name}</span>
                   )}
                 </div>
-                <div className="flexs">
-                  <label className="input-label" htmlFor="email-input">
+                <div className="message-input-group">
+                  <label className="message-label" htmlFor="email-input">
                     Email
                   </label>
                   <input
-                    className={`input-field ${
-                      errors.email ? "error-border" : ""
+                    className={`message-input ${
+                      errors.email ? "message-error-border" : ""
                     }`}
                     id="email-input"
                     name="email"
@@ -133,17 +128,16 @@ const Messform = () => {
                     onChange={handleChange}
                   />
                   {errors.email && (
-                    <span className="error-message">{errors.email}</span>
+                    <span className="message-error-message">{errors.email}</span>
                   )}
                 </div>
               </div>
-              <label className="input-label" htmlFor="message-input">
+              <label className="message-label" htmlFor="message-input">
                 Message
               </label>
-
               <textarea
-                className={`textarea-fieldm ${
-                  errors.message ? "error-border" : ""
+                className={`message-textarea ${
+                  errors.message ? "message-error-border" : ""
                 }`}
                 id="message-input"
                 name="message"
@@ -151,15 +145,13 @@ const Messform = () => {
                 placeholder="Send Message..."
                 autoComplete="off"
                 onChange={handleChange}
-              >
-                {" "}
-              </textarea>
+              />
               {errors.message && (
-                <span className="error-messagess">{errors.message}</span>
+                <span className="message-error-message">{errors.message}</span>
               )}
             </div>
-            <div className="button-section">
-              <button type="submit" className="send-button">
+            <div className="message-button-wrapper">
+              <button type="submit" className="message-send-button">
                 Send
               </button>
             </div>

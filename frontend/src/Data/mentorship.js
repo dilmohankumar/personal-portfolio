@@ -12,7 +12,7 @@ function CollectionPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://personal-portfolio-4rrr.onrender.com/api/mentorships");
+        const response = await fetch("http://localhost:5000/api/mentorships");
         const data = await response.json();
         const sortedData = data.reverse();
         setCollection(sortedData);

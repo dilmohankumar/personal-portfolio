@@ -3,6 +3,8 @@ import { jwtDecode } from "jwt-decode";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
+import { Link } from "react-router-dom";
+import Logo from "../../assests/logo.png"
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -25,18 +27,16 @@ const LoginPage = () => {
     if (validate()) {
       try {
         const response = await axios.post(
-          "https://personal-portfolio-4rrr.onrender.com/api/login",
+          "http://localhost:5000/api/login",
           formData
         );
         const { token } = response.data;
-        console.log("Token received:", token);
         if (!token) {
           throw new Error("Token not received from API");
         }
         const decodedToken = jwtDecode(token);
 
         localStorage.setItem("Token", token);
-        console.log("Saved token:", localStorage.getItem("Token"));
         if (decodedToken.role === "admin") {
           navigate("/");
         } else {
@@ -59,8 +59,17 @@ const LoginPage = () => {
   return (
     <div className="login-page-wrapper">
       <div className="login-page">
+      <div className="login-header-logo-wrapper">
+          <Link to="/">
+            <img
+              src={Logo}
+              className="startupmess-logo"
+              alt="logo"
+            />
+          </Link>
+        </div>
         <h1 className="login-title">Login</h1>
-        <form onSubmit={handleSubmit}>
+        <form  onSubmit={handleSubmit}>
           <div className="login-input-container">
             <label htmlFor="email">Email</label>
             <input
