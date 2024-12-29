@@ -46,7 +46,7 @@ const SignupPage = () => {
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/signup",
+          "https://personal-portfolio-4rrr.onrender.com/api/signup",
           formData
         );
         const { token } = response.data;

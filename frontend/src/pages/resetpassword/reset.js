@@ -12,7 +12,7 @@ const Reset = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/sendotp",
+        "https://personal-portfolio-4rrr.onrender.com/api/auth/sendotp",
         { identifier }
       );
       console.log("Response from backend:", response.data);

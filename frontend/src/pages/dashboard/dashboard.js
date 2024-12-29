@@ -14,7 +14,7 @@ function CollectionPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/collections");
+        const response = await fetch("https://personal-portfolio-4rrr.onrender.com/api/collections");
         const data = await response.json();
         console.log("API Response:", data);
         setCollections(data);

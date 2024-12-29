@@ -32,7 +32,7 @@ const VerifyOtp = () => {
     try {
       const otpValue = otp.join("");
       const response = await axios.post(
-        "http://localhost:5000/api/auth/verifyotp",
+        "https://personal-portfolio-4rrr.onrender.com/api/auth/verifyotp",
         {
           identifier,
           otp: otpValue,
