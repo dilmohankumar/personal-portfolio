@@ -78,7 +78,10 @@ const Messform = () => {
       </div>
       {/* Form Section */}
       <div className="message-form-wrapper">
-        <div className="message-form-box" style={{ backgroundColor: "#00ffff17" }}>
+        <div
+          className="message-form-box"
+          style={{ backgroundColor: "#00ffff17" }}
+        >
           <div className="message-logo-section">
             <img
               src={Developer}
@@ -128,32 +131,39 @@ const Messform = () => {
                     onChange={handleChange}
                   />
                   {errors.email && (
-                    <span className="message-error-message">{errors.email}</span>
+                    <span className="message-error-message">
+                      {errors.email}
+                    </span>
+                  )}
+                </div>
+
+                <div className="message-input-group">
+                  <label className="message-label" htmlFor="message-input">
+                    Message
+                  </label>
+                  <textarea
+                    className={`message-textarea ${
+                      errors.message ? "message-error-border" : ""
+                    }`}
+                    id="message-input"
+                    name="message"
+                    value={formData.message}
+                    placeholder="Send Message..."
+                    autoComplete="off"
+                    onChange={handleChange}
+                  />
+                  {errors.message && (
+                    <span className="message-error-message">
+                      {errors.message}
+                    </span>
                   )}
                 </div>
               </div>
-              <label className="message-label" htmlFor="message-input">
-                Message
-              </label>
-              <textarea
-                className={`message-textarea ${
-                  errors.message ? "message-error-border" : ""
-                }`}
-                id="message-input"
-                name="message"
-                value={formData.message}
-                placeholder="Send Message..."
-                autoComplete="off"
-                onChange={handleChange}
-              />
-              {errors.message && (
-                <span className="message-error-message">{errors.message}</span>
-              )}
-            </div>
-            <div className="message-button-wrapper">
-              <button type="submit" className="message-send-button">
-                Send
-              </button>
+              <div className="message-button-wrapper">
+                <button type="submit" className="message-send-button">
+                  Send
+                </button>
+              </div>{" "}
             </div>
           </form>
         </div>

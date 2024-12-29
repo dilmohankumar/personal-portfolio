@@ -90,31 +90,39 @@ const Header = () => {
           ref={menuRef}
           className={showMenu ? "show-nav-wrapper" : "nav-wrapper"}
         >
-          <ul className="header-list">
-            <li className="learningp" onClick={() => navigate("/partnership")}>
-              Learning Partnership
-            </li>
-            <li className="sendMessage" onClick={() => navigate("/MessForm")}>
-              Send Message
-            </li>
+          <div className="header-list-body">
+            <ul className="header-list">
+              <li
+                className="learningp"
+                onClick={() => navigate("/partnership")}
+              >
+                Learning Partnership
+              </li>
+              <li className="sendMessage" onClick={() => navigate("/MessForm")}>
+                Send Message
+              </li>
 
-            {userRole === "admin" && (
-              <li className="dashboard" onClick={() => navigate("/Dashboard")}>
-                Dashboard
-              </li>
-            )}
-            {isLoggedIn ? (
-              <li className="logoutt" onClick={handleLogout}>
-                Logout
-              </li>
-            ) : (
-              <li className="loginn" onClick={() => navigate("/login")}>
-                Login
-              </li>
-            )}
+              {userRole === "admin" && (
+                <li
+                  className="dashboard"
+                  onClick={() => navigate("/Dashboard")}
+                >
+                  Dashboard
+                </li>
+              )}
+              {isLoggedIn ? (
+                <li className="logoutt" onClick={handleLogout}>
+                  Logout
+                </li>
+              ) : (
+                <li className="loginn" onClick={() => navigate("/login")}>
+                  Login
+                </li>
+              )}
 
-            <div className="linee"></div>
-          </ul>
+              <div className="linee"></div>
+            </ul>
+          </div>
         </div>
       </div>
     </header>

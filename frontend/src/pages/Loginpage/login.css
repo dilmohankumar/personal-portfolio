@@ -3,11 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    #0093e9,
-    #80d0c7
-  );
+  background: linear-gradient(135deg, #0093e9, #80d0c7);
   overflow: hidden;
 }
 
@@ -113,6 +109,10 @@
 .login-links {
   text-align: center;
   margin-top: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .login-links a {
@@ -152,7 +152,7 @@
 .password-toggle-btn:hover {
   color: #005f73;
 }
-.login-header-logo-wrapper img{
+.login-header-logo-wrapper img {
   width: 5rem;
   height: 5rem;
   transition: transform 0.3s ease-in-out;

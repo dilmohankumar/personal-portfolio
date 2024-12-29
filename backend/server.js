@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const router = express.Router();
-const serverless =require('serverless-http');
+const serverless = require("serverless-http");
 
 const crypto = require("crypto");
 const Razorpay = require("razorpay");
@@ -17,13 +17,15 @@ const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 const authRoutes = require("./models/Auth.js");
 const loginRoute = require("./models/Authlogin");
+const authRoute = require("./routes/authRoute.js");
+const authRoutePass = require("./routes/resetauthpass.js");
 
 dotenv.config();
 
 const app = express();
-app.get(`/`,(req, res)=>{
-  res.json(`working`)
-})
+app.get(`/`, (req, res) => {
+  res.json(`working`);
+});
 
 app.use(express.json());
 app.use(cors());
@@ -35,19 +37,20 @@ app.use("/api/project", projectRouter);
 app.use("/", collectionsRoute);
 app.use("/api/signup", authRoutes);
 app.use("/api", loginRoute);
+app.use("/api/auth", authRoute);
+app.use("/api/auth", authRoutePass);
 
-app.use(cors({
-  origin: ['https://personal-portfolio-kfzs.vercel.app'], // Allow specific origin
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
-}));
-
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
 
 mongoose
-  .connect(process.env.MONGODB_URI, {
-    
-  })
+  .connect(process.env.MONGODB_URI, {})
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 

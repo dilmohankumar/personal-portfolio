@@ -17,6 +17,9 @@ import Projectdiscuss from "./pages/projectdiscuss/projectdiscuss.js";
 import Signup from "./pages/signup/signup.js";
 import Startupmess from "./pages/startupmess/startupmess.js";
 import Success from "./pages/successpage/success.js";
+import Reset from "./pages/resetpassword/reset.js";
+import Otp from "./pages/resetpassword/otp.js";
+import Resetpassword from "./pages/resetpassword/ResetPasswordpage.js";
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem("Token");
@@ -139,6 +142,30 @@ function App() {
           element={
             <PlainLayout>
               <Signup />
+            </PlainLayout>
+          }
+        />
+        <Route
+          path="/reset"
+          element={
+            <PlainLayout>
+              <Reset />
+            </PlainLayout>
+          }
+        />
+        <Route
+          path="/otp"
+          element={
+            <PlainLayout>
+              <Otp />
+            </PlainLayout>
+          }
+        />
+        <Route
+          path="/resetpassword"
+          element={
+            <PlainLayout>
+              <Resetpassword />
             </PlainLayout>
           }
         />

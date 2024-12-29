@@ -21,6 +21,18 @@ import "./responsive.css";
 import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
+  const [successMessage, setSuccessMessage] = useState("");
+
+  useEffect(() => {
+    const message = localStorage.getItem("resetMessage");
+    if (message) {
+      setSuccessMessage(message);
+      localStorage.removeItem("resetMessage");
+      setTimeout(() => {
+        setSuccessMessage("");
+      }, 2000);
+    }
+  }, [successMessage]);
 
   const handleClick = (event) => {
     const token = localStorage.getItem("Token");
@@ -41,7 +53,7 @@ const Home = () => {
       text: "Dilmohan’s technical and design skills are outstanding. He consistently delivers beyond expectations and always on schedule.",
       name: "johan",
       title: "Tech Co.",
-      company: "Amazon",
+      company: "dairy",
       image: Developer,
     },
     {
@@ -52,6 +64,7 @@ const Home = () => {
       image: Developer,
     },
   ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNext = () => {
@@ -67,6 +80,11 @@ const Home = () => {
     <div className="home-container">
       <div className="home-content">
         <h1 className="home-title">Mern Developer & Mentor</h1>
+        {successMessage && (
+          <div className="popup-message">
+            <p>{successMessage}</p>
+          </div>
+        )}
         <p className="home-description">
           I create and code clean, elegant designs, and I’m passionate about my
           work.

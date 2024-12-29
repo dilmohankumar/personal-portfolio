@@ -1,13 +1,16 @@
 .header-container {
   display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding: 1rem 5rem;
   align-items: center;
 }
+.show-nav-wrapper {
+  width: 100%;
+}
+
 .header-list {
   display: flex;
+  float: right;
   gap: 2rem;
   list-style: none;
   font-family: "Itim";
@@ -22,21 +25,29 @@
   text-decoration: none;
   color: black;
 }
-.sendMessage:hover {
-  background-color: rgb(0, 157, 255);
-}
-.sendMessage:hover a {
+.header-list .sendMessage:hover {
+  background-color: rgba(3, 125, 247, 0.71);
   color: white;
 }
+.header-list .sendMessage:active {
+  background-color: rgb(3, 125, 247);
+}
+
 .learningp a:hover {
   color: blueviolet;
 }
 .sendMessage {
+  width: 7rem;
   border-radius: 2rem;
-  border: 2px solid rgb(0, 157, 255);
-  padding: 20px;
+  background: 2px solid rgb(0, 157, 255) !important;
+  padding: 13px;
   height: 1px;
+  height: auto;
 }
+.header-list .sendMessage {
+  background-color: rgba(3, 125, 247, 0.499);
+}
+
 .menu-icon {
   cursor: pointer;
   z-index: 5;
@@ -53,45 +64,115 @@
 .dashboard:hover {
   background-color: rgb(0, 157, 255);
 }
+
 .loginn {
-  color: rgb(0, 0, 0);
-  border: 1px solid blue;
-  border-radius: 25px;
-  padding: 10px 20px;
+  width: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
   font-size: 16px;
-  font-family: "Itim", sans-serif;
-  transition: background-color 0.3s, transform 0.3s;
+  font-weight: 400;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  color: #000000;
+  background-color: #008deb68;
+  border: none;
+  border-radius: 25px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .loginn:hover {
-  background-color: rgba(111, 189, 231, 0.687);
-  transform: translateY(-2px);
+  background-color: #0482f1b0;
+  color: white;
 }
 
 .loginn:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #0985eb95;
 }
+
+.loginn:focus-visible {
+  outline: 2px solid #80bfff;
+  outline-offset: 2px;
+}
+
+.loginn:disabled {
+  background-color: #e1e1e1;
+  color: #a1a1a1;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
 .logoutt {
-  color: rgb(0, 0, 0);
-  border: 1px solid blue;
-  border-radius: 25px;
-  padding: 10px 20px;
+  width: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
   font-size: 16px;
-  font-family: "Itim", sans-serif;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-weight: 600;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  color: #ffffff;
+  background-color: #ec1e1edd;
+  border: none;
+  border-radius: 25px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logoutt:hover {
-  background-color: #50a0f0;
-  transform: translateY(-2px);
+  background-color: #c90c0cdd;
 }
 
 .logoutt:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #ff0202;
+}
+
+.logoutt:focus-visible {
+  outline: 2px solid #ffac99;
+  outline-offset: 2px;
+}
+
+.logoutt:disabled {
+  background-color: #e1e1e1;
+  color: #a1a1a1;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.learningp {
+  width: 12rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  color: #000000;
+  background-color: #008deb68;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.learningp:hover {
+  background-color: #0482f1b0;
+  color: white;
+}
+
+.learningp:active {
+  background-color: #0985eb95;
+}
+
+.learningp:focus-visible {
+  outline: 2px solid #80bfff;
+  outline-offset: 2px;
+}
+
+.learningp:disabled {
+  background-color: #e1e1e1;
+  color: #a1a1a1;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
 }

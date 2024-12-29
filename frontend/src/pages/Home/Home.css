@@ -27,10 +27,9 @@
 }
 
 .home-content:hover .home-title {
-  transform: scale(1.05); /* Subtle scaling on hover */
+  transform: scale(1.05);
 }
 
-/* Gradient Animation */
 @keyframes gradient-flow {
   0% {
     background-position: 0% 50%;
@@ -43,11 +42,10 @@
   }
 }
 
-/* Description Styling */
 .home-description {
   font-size: 1.4rem;
   font-weight: 400;
-  color: rgba(25, 3, 3, 0.9); /* Slightly muted text color */
+  color: rgba(25, 3, 3, 0.9);
   text-align: center;
   line-height: 1.8;
   margin-top: 1.5rem;
@@ -55,11 +53,10 @@
 }
 
 .home-content:hover .home-description {
-  color: #000000; /* Brighten on hover */
-  transform: translateY(-5px); /* Lift effect */
+  color: #000000;
+  transform: translateY(-5px);
 }
 
-/* Button (Optional for CTA) */
 .home-button {
   margin-top: 2rem;
   padding: 0.8rem 2rem;
@@ -74,7 +71,6 @@
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .home-content {
     padding: 2.5rem 2rem;
@@ -140,8 +136,6 @@
   height: auto;
 }
 
-/* ------- Enhanced Bio Section CSS ------- */
-
 .bio-container {
   display: flex;
   flex-direction: column;
@@ -175,7 +169,6 @@
   animation: glow-effect 5s infinite alternate ease-in-out;
 }
 
-/* Title Styling */
 .bio-title {
   font-size: 2.8rem;
   font-weight: 800;
@@ -195,7 +188,6 @@
   background-position: 100% 0;
 }
 
-/* Description Styling */
 .bio-description {
   font-size: 1.2rem;
   line-height: 1.8;
@@ -212,7 +204,6 @@
   transform: translateY(-5px);
 }
 
-/* Keyframe Animations */
 @keyframes glow-effect {
   0% {
     transform: rotate(0deg);
@@ -222,7 +213,6 @@
   }
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .bio-title {
     font-size: 2.4rem;
@@ -257,7 +247,6 @@
   }
 }
 
-/* ------- Skills Section CSS (Cartoonish Theme) ------- */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -380,17 +369,16 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* Recent Work Section */
 .recent-work-container {
-  background: linear-gradient(135deg, #ffe259, #51c8ff); /* Warm and playful gradient */
+  background: linear-gradient(135deg, #ffe259, #51c8ff);
   padding: 6rem 2rem;
   text-align: center;
   max-width: 100%;
   margin: 3rem auto;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-  transform: scale(1); /* Smooth scaling effect */
+  transform: scale(1);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -398,7 +386,7 @@
 .recent-work-title {
   font-size: 3.2rem;
   font-weight: 600;
-  color: #2d3748; /* Darker shade for a professional look */
+  color: #2d3748;
   margin-bottom: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -410,19 +398,19 @@
   display: block;
   width: 80px;
   height: 5px;
-  background: linear-gradient(90deg, #1a202c, #4c51bf); /* Vibrant gradient */
+  background: linear-gradient(90deg, #1a202c, #4c51bf);
   margin: 1.5rem auto;
   transition: width 0.3s ease;
 }
 
 .recent-work-title:hover::after {
-  width: 200px; /* Expands underline on hover */
+  width: 200px;
 }
 
 /* Description Styling */
 .recent-work-description {
   font-size: 1.25rem;
-  color: #4a5568; /* Neutral color for the description */
+  color: #4a5568;
   line-height: 1.8;
   margin-top: 1rem;
   max-width: 750px;
@@ -437,7 +425,7 @@
 
 .recent-work-description .email-link {
   font-weight: bold;
-  color: #4c51bf; /* Accent color */
+  color: #4c51bf;
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: color 0.3s ease, border-bottom 0.3s ease;
@@ -445,15 +433,14 @@
 
 .recent-work-description .email-link:hover {
   color: #2d3748;
-  border-bottom: 2px solid #4c51bf; /* Underline effect */
-  transform: translateY(-2px); /* Slight "lift" effect */
+  border-bottom: 2px solid #4c51bf;
+  transform: translateY(-2px);
 }
 
 .recent-work-description .email-link:active {
-  color: #1a202c; /* Darken on click */
+  color: #1a202c;
 }
 
-/* Icon Style */
 .recent-work-container .email-link a {
   font-weight: bold;
   color: #4c51bf;
@@ -464,17 +451,16 @@
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-/* --- Project Cards Container --- */
+
 .project-cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
   padding: 4rem;
-  background: linear-gradient(135deg, #ffecd2, #9fe2fc); /* Vibrant background for a playful feel */
+  background: linear-gradient(135deg, #ffecd2, #9fe2fc);
   color: white;
 }
 
-/* --- Individual Project Card --- */
 .project-card-1 {
   border: 2px solid #f3f4f6;
   border-radius: 1rem;
@@ -484,17 +470,16 @@
   overflow: hidden;
   background: #ffffff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease-in-out;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    box-shadow 0.3s ease-in-out;
 }
 
-/* --- Hover Effect for Card --- */
 .project-card-1:hover {
-  transform: scale(1.1) rotate(-3deg); /* Bouncy hover effect */
+  transform: scale(1.1) rotate(-3deg);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   z-index: 5;
 }
 
-/* --- Image Styling --- */
 .project-card-1 img {
   width: 100%;
   height: 100%;
@@ -503,13 +488,11 @@
   transition: transform 0.6s ease-in-out, opacity 0.4s ease;
 }
 
-/* --- Image Hover Animation --- */
 .project-card-1:hover img {
-  transform: scale(1.2); /* Slight zoom for a dynamic effect */
-  opacity: 0.2; /* Fades the image for focus on content */
+  transform: scale(1.2);
+  opacity: 0.2;
 }
 
-/* --- Card Content --- */
 .card-content {
   padding: 15px;
   position: absolute;
@@ -521,7 +504,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #25a9e7, #25037c); /* Vibrant gradient background */
+  background: linear-gradient(135deg, #25a9e7, #25037c);
   border-radius: 1rem;
   opacity: 0;
   transform: translateY(20px);
@@ -529,48 +512,42 @@
   text-align: center;
 }
 
-/* --- Content Visibility on Hover --- */
 .project-card-1:hover .card-content {
   opacity: 1;
-  transform: translateY(0); /* Slides up for a fun reveal */
+  transform: translateY(0);
 }
-
-/* --- Card Description --- */
 .card-description {
   font-size: 1.2rem;
   margin: 0.5rem 0;
   color: #ffffff;
-  font-family: "Comic Sans MS", cursive; /* Playful, cartoonish font */
-  text-shadow: 2px 2px #00000033; /* Subtle text shadow for depth */
+  font-family: "Comic Sans MS", cursive;
+  text-shadow: 2px 2px #00000033;
   letter-spacing: 1.5px;
   font-weight: bold;
 }
 
-/* --- Call-to-Action Link --- */
 .card-link {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  background: #ff5722; /* Bold button background */
+  background: #ff5722;
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Cartoonish depth effect */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* --- Button Hover and Active States --- */
 .card-link:hover {
-  background: #d84315; /* Slightly darker shade on hover */
-  transform: scale(1.1) rotate(3deg); /* Fun bounce effect */
+  background: #d84315;
+  transform: scale(1.1) rotate(3deg);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-link:active {
-  transform: scale(0.95); /* Shrink effect on click */
+  transform: scale(0.95);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* --- Responsive Design --- */
 @media (max-width: 1024px) {
   .project-cards-container {
     padding: 3rem;
@@ -615,56 +592,51 @@
     font-size: 0.8rem;
   }
 }
-/* Container for the GitHub link */
+
 .github-link {
-  text-align: center; /* Center the link */
-  margin: 40px 0; /* Vertical spacing */
+  text-align: center;
+  margin: 40px 0;
 }
 
-/* Link styling */
 .github-link a {
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
   display: inline-block;
-  background-color: #ff6347; /* Vibrant red background */
-  color: #fff; /* White text */
-  font-size: 1.2rem; /* Slightly larger font */
-  padding: 15px 35px; /* Larger padding for a more substantial feel */
-  border-radius: 50px; /* More rounded corners */
-  font-weight: 700; /* Bold text for visibility */
-  letter-spacing: 2px; /* More spacing between letters for a fun look */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a cartoonish shadow */
-  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease;
+  background-color: #ff6347;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    box-shadow 0.3s ease;
 }
 
-/* Hover effect for the link */
 .github-link a:hover {
-  background-color: #ff4500; /* Brighter orange on hover */
-  color: #fff; /* Keep text white */
-  
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  background-color: #ff4500;
+  color: #fff;
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Active effect for the link */
 .github-link a:active {
-  transform: translateY(4px) scale(0.98); /* Slight "press" effect */
-  background-color: #ff6347; /* Original background color */
+  transform: translateY(4px) scale(0.98);
+  background-color: #ff6347;
 }
 
-/* Text styling */
 .github-link-p {
   margin: 0;
-  text-transform: uppercase; /* Bold, modern styling */
-  font-family: "Comic Sans MS", cursive, sans-serif; /* Playful font */
+  text-transform: uppercase;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 1.2rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect for the text */
 .github-link a:hover .github-link-p {
-  color: #ffeb3b; /* Bright yellow text on hover */
-  transform: skewX(-5deg); /* Slight skew for a cartoonish feel */
+  color: #ffeb3b;
+  transform: skewX(-5deg);
 }
-
 
 .collaboration-header {
   display: flex;
@@ -678,9 +650,9 @@
 }
 .collaboration-header h1 {
   width: 70%;
-  background: linear-gradient(90deg, #6a11cb, #2575fc); /* Gradient text effect */
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Transparent fill for gradient */
+  -webkit-text-fill-color: transparent;
 }
 .collaboration-image-container {
   display: grid;
@@ -692,7 +664,7 @@
   margin-bottom: 20rem;
 }
 .collaboration-image {
-  display: flex;
+  display: none;
   justify-content: center;
   border: 1px solid rebeccapurple;
   border-radius: 10px;
@@ -788,17 +760,13 @@
   width: 18px !important;
   height: auto !important;
 }
-/* Main collaboration section container */
-
 .collaboration-section {
   color: rgb(15, 2, 2);
   padding: 60px 30px;
   text-align: center;
-
   margin: 40px 0;
   position: relative;
   overflow: hidden;
-
   animation: zoomIn 0.8s ease;
 }
 
@@ -829,12 +797,11 @@
 
 .collaboration-link:hover {
   background-color: #0e19df;
-
 }
 
-/* Animations */
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -961,4 +928,63 @@
   border: 1px solid #b6b7b74d;
   top: 5rem;
   position: relative;
+}
+.popup-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #581179;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: slideIn 0.5s ease-out, bounce 1s ease infinite;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.popup-message p {
+  margin: 0;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 16px;
+  animation: textAppear 0.5s ease-out;
+}
+
+@keyframes textAppear {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

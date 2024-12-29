@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
 import { Link } from "react-router-dom";
-import Logo from "../../assests/logo.png"
+import Logo from "../../assests/logo.png";
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -59,17 +59,13 @@ const LoginPage = () => {
   return (
     <div className="login-page-wrapper">
       <div className="login-page">
-      <div className="login-header-logo-wrapper">
+        <div className="login-header-logo-wrapper">
           <Link to="/">
-            <img
-              src={Logo}
-              className="startupmess-logo"
-              alt="logo"
-            />
+            <img src={Logo} className="startupmess-logo" alt="logo" />
           </Link>
         </div>
         <h1 className="login-title">Login</h1>
-        <form  onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className="login-input-container">
             <label htmlFor="email">Email</label>
             <input
@@ -114,7 +110,7 @@ const LoginPage = () => {
           </button>
         </form>
         <div className="login-links">
-          <a href="/forgot-password">Forgot Password?</a>
+          <a href="/reset">Forgot Password?</a>
           <a href="/signup">Don't have an account? Sign Up</a>
         </div>
       </div>
