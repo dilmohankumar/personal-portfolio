@@ -166,7 +166,7 @@ const Partnership = () => {
           <img src={cd} alt="" className="skill-image" />
           <h1 className="skill-title">Instant guidance</h1>
           <h1 className="skill-description" id="skill-descriptions">
-            ₨ 2,000
+            ₨ 0
           </h1>
           <p className="skill-languages-list">
             1 hour of open and honest conversation tailored to your needs,
@@ -187,7 +187,7 @@ const Partnership = () => {
           <img src={cd} alt="" className="skill-image" />
           <h1 className="skill-title">Projects Support</h1>
           <h1 className="skill-description" id="skill-descriptions">
-            ₨ 10,000
+            ₨ 0
           </h1>
           <p className="skill-languages-list">
             Four hours of focused feedback and in-depth design critique to
@@ -208,7 +208,7 @@ const Partnership = () => {
           <img src={cd} alt="" className="skill-image" />
           <h1 className="skill-title">Targeted Education</h1>
           <h1 className="skill-description" id="skill-descriptions">
-            ₨ 20,000
+            ₨ 0
           </h1>
           <p className="skill-languages-list">
             Twelve hours of dedicated professional coaching and collaborative
